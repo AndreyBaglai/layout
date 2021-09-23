@@ -1,3 +1,23 @@
+@import './light-theme-variables.scss';
+@import './dark-theme-variables.scss';
+
+:root {
+  --color-page-background: #{$light-primary-bg-color};
+  --color-text: #{$light-primary-text-color};
+}
+
+.dark {
+  --color-page-background: #{$dark-primary-bg-color};
+  --color-text: #{$dark-primary-text-color};
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
+  transition: all .15s ease;
+  background-color: var(--color-page-background);
+  color: var(--color-text);
+}
+
+p {
+  color: var(--color-text);
 }
