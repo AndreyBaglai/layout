@@ -4,7 +4,9 @@ import Header from 'components/Header';
 import Sample from 'components/Sample';
 import Divider from 'components/Divider';
 
-import image from 'sources/images/top-bg.png';
+import imageTopBg from 'sources/images/top-bg.png';
+import imageBottomBg from 'sources/images/bottom-bg.png';
+import InputRange from 'components/InputRange';
 
 const Page: React.FC = () => {
   // const onClick = () => {
@@ -14,8 +16,10 @@ const Page: React.FC = () => {
   return (
     <>
       <Header />
-      <Sample title="New Collection" text="Inspired by city explorers. Made to move. Built for tomorrow" controls={true} imageBg={image} />
+      <Sample title="New Collection" text="Inspired by city explorers. Made to move. Built for tomorrow" controls={true} imageBg={imageTopBg} />
       <Divider text="We’ve extended our returns period to 60 days" />
+      <InputRange />
+      <Sample title="New in Town" text="Made to move. Built for tomorrow" controls={false} imageBg={imageBottomBg} />
     </>
   );
 };
