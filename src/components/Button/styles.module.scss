@@ -1,0 +1,19 @@
+@import 'sources/styles/variables.scss';
+
+.btn {
+  background-color: $blue;
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
+}
