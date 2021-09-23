@@ -1,0 +1,19 @@
+.toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4px 6px 4px 4px;
+  border-radius: 90px;
+  width: 82px;
+  height: 40px;
+  background-color: var(--color-toggle-background);
+
+  svg {
+    cursor: pointer;
+
+    path {
+      fill: var(--color-toggle-icon);
+    }
+  }
+}

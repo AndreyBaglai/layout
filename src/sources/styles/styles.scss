@@ -2,19 +2,33 @@
 @import './dark-theme-variables.scss';
 
 :root {
-  --color-page-background: #{$light-primary-bg-color};
+  --primary-color-page-background: #{$light-primary-bg-color};
+  --secondary-color-page-background: #{$light-secondary-bg-color};
+
+  --color-toggle-background: #{$light-toggle-bg-color};
+  --color-toggle-icon: #{$dark-toggle-icon-color};
+
+  --color-nav-link: #{$dark-secondary-bg-color};
+
   --color-text: #{$light-primary-text-color};
 }
 
 .dark {
-  --color-page-background: #{$dark-primary-bg-color};
+  --primary-color-page-background: #{$dark-primary-bg-color};
+  --secondary-color-page-background: #{$dark-secondary-bg-color};
+
+  --color-toggle-background: #{$dark-toggle-bg-color};
+  --color-toggle-icon: #{$light-toggle-icon-color};
+
+  --color-nav-link: #{$light-primary-bg-color};
+
   --color-text: #{$dark-primary-text-color};
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
   transition: all .15s ease;
-  background-color: var(--color-page-background);
+  background-color:  var(--primary-color-page-background);
   color: var(--color-text);
 }
 

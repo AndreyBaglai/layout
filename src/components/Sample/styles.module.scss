@@ -1,0 +1,41 @@
+.sample {
+  min-height: 750px;
+  margin: 0 auto;
+  padding: 0 70px 38px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .content {
+    margin-bottom: 160px;
+
+    .title {
+      font-weight: bold;
+      font-size: 112px;
+      line-height: 112px;
+      max-width: 100px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .text {
+      margin-top: 0;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      color: #ffffff;
+      margin-bottom: 32px;
+    }
+  }
+
+  .icons {
+    width: 80px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
