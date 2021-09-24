@@ -6,12 +6,12 @@ import Divider from 'components/Divider';
 
 import imageSrc1 from 'sources/images/top-bg.png';
 import imageSrc2 from 'sources/images/bottom-bg.png';
-import dontMissSrc1 from 'sources/images/dont-miss-1.png';
 
 import InputRange from 'components/InputRange';
 import SectionHeader from 'components/SectionHeader';
 import Card from 'components/Card';
 import Categories from './Categories';
+import DontMiss from './DontMiss';
 
 const Page: React.FC = () => {
   // const onClick = () => {
@@ -31,7 +31,7 @@ const Page: React.FC = () => {
       {/*
       <SectionHeader title="Don't miss" controls={false} /> */}
       <Categories />
-      <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
+      <DontMiss />
       <Sample
         title="New in Town"
         text="Made to move. Built for tomorrow"
