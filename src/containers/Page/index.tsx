@@ -3,13 +3,13 @@ import React from 'react';
 import Header from 'components/Header';
 import Sample from 'components/Sample';
 import Divider from 'components/Divider';
-
-import imageSrc1 from 'sources/images/top-bg.png';
-import imageSrc2 from 'sources/images/bottom-bg.png';
-
 import Categories from './Categories';
 import DontMiss from './DontMiss';
 import Trending from './Trending';
+import Footer from 'components/Footer';
+
+import imageSrc1 from 'sources/images/top-bg.png';
+import imageSrc2 from 'sources/images/bottom-bg.png';
 
 const Page: React.FC = () => {
   // const onClick = () => {
@@ -35,6 +35,7 @@ const Page: React.FC = () => {
         controls={false}
         imageBg={imageSrc2}
       />
+      <Footer />
     </>
   );
 };
