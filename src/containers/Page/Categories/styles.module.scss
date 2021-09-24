@@ -3,6 +3,7 @@
   padding: 0 70px 38px;
   margin-bottom: 100px;
   overflow-x: hidden;
+  max-width: 1440px;
 
   .content {
     display: flex;
@@ -18,6 +19,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+      margin-right: 20px;
     }
   }
 }

@@ -23,6 +23,10 @@ const Categories: React.FC = () => {
           <Card size="small" imageSrc={categoriesSrc2} text="Kids" />
           <Card size="small" imageSrc={categoriesSrc3} text="Men" />
         </div>
+        <div className={styles.items}>
+          <Card size="small" imageSrc={categoriesSrc2} text="Kids" />
+          <Card size="small" imageSrc={categoriesSrc3} text="Men" />
+        </div>
       </div>
 
       <InputRange />
