@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 24px;
+
+  .text {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 64px;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+}
+
+.small {
+  width: 427px;
+  height: 475px;
+}
+
+.middle {
+  width: 650px;
+  height: 515px;
+}
+
+.big {
+  width: 873px;
+  height: 970px;
+}
