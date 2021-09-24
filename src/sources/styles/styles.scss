@@ -30,6 +30,7 @@ body {
   transition: all .15s ease;
   background-color:  var(--primary-color-page-background);
   color: var(--color-text);
+  overflow-x: hidden;
 }
 
 p {

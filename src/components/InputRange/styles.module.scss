@@ -2,12 +2,11 @@
 
 .range {
   width: 100%;
-  margin: 10px 0;
+  margin-top: 24px;
 }
 
 .range[type='range'] {
   -webkit-appearance: none;
-  margin: 10px 0;
 }
 
 .range[type='range']:focus {

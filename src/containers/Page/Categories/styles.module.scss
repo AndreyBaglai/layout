@@ -1,0 +1,22 @@
+.categories {
+  margin: 0 auto;
+  padding: 0 70px 38px;
+  margin-bottom: 100px;
+
+  .content {
+    display: flex;
+    justify-content: flex-start;
+    max-height: 970px;
+
+    .mainImg {
+      margin-right: 20px;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
