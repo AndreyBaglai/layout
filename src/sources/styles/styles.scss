@@ -33,6 +33,6 @@ body {
   overflow-x: hidden;
 }
 
-p {
-  color: var(--color-text);
+#root {
+  max-width: 100%;
 }
