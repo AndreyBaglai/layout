@@ -1,0 +1,75 @@
+.wrapper {
+  background-color: var(--secondary-color-page-background);
+  position: absolute;
+  width: 100%;
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+  top: -1000px;
+  z-index: 20;
+
+  .inputWrapper {
+    position: relative;
+
+    .search {
+      width: 620px;
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      border: none;
+      margin: 0 auto;
+      padding: 8px 8px 8px 54px;
+
+      &::placeholder {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        color: rgba(15, 15, 15, 0.4);
+      }
+    }
+
+    .searchIcon {
+      position: absolute;
+      top: 6px;
+      left: 16px;
+    }
+  }
+
+  .reset {
+    width: 680px;
+    text-align: left;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1e1e22;
+  }
+
+  .option {
+    width: 680px;
+    text-align: left;
+    margin: 0 0 15px;
+    position: relative;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.6);
+
+    svg {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      color: rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+    }
+  }
+
+  .closeField {
+    position: absolute;
+    right: 37px;
+    top: 42px;
+    cursor: pointer;
+  }
+}

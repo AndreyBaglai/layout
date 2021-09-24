@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <ToggleTheme />
         </div>
 
-        <FooterNav title="Categories" links={['Popular', 'Sale', 'Men', 'Kids', 'New', 'Women']} columns={3} />
+        <FooterNav title="Categories" links={['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']} columns={3} />
         <FooterNav title="About Us" links={['Contacts', 'Support']} columns={1} />
 
         <div className={styles.socialLinksWrapper}>
