@@ -7,11 +7,9 @@ import Divider from 'components/Divider';
 import imageSrc1 from 'sources/images/top-bg.png';
 import imageSrc2 from 'sources/images/bottom-bg.png';
 
-import InputRange from 'components/InputRange';
-import SectionHeader from 'components/SectionHeader';
-import Card from 'components/Card';
 import Categories from './Categories';
 import DontMiss from './DontMiss';
+import Trending from './Trending';
 
 const Page: React.FC = () => {
   // const onClick = () => {
@@ -28,8 +26,7 @@ const Page: React.FC = () => {
         imageBg={imageSrc1}
       />
       <Divider text="We’ve extended our returns period to 60 days" />
-      {/*
-      <SectionHeader title="Don't miss" controls={false} /> */}
+      <Trending />
       <Categories />
       <DontMiss />
       <Sample

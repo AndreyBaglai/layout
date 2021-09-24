@@ -1,0 +1,102 @@
+@import 'sources/styles/variables.scss';
+
+.card {
+  width:  427px;
+  height: 551px;
+  margin-right: 20px;
+
+  .img {
+    width: 427px;
+    height: 475px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+
+    .favorite {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      cursor: pointer;
+
+      path {
+        fill: #ffffff;
+      }
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      padding: 4px;
+      margin: 0;
+      transform: translate(-50%, 0);
+      width: 54px;
+
+      li {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: #C4C4C4;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+
+    .tag, .tagNew {
+      position: absolute;
+      bottom: 12px;
+      padding: 4px 8px;
+      left: 12px;
+      background-color: $pink;
+      width: 54px;
+      border-radius: 8px;
+      text-align: center;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .tagNew {
+      background-color: $green;
+    }
+  }
+
+  .description {
+    margin-top: 20px;
+
+    .top {
+      margin-bottom: 8px;
+    }
+
+    .top, .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .title {
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .price {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .subtitle, .subprice {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

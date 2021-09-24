@@ -1,0 +1,12 @@
+.trending {
+  margin: 36px auto 100px;
+  padding: 0 70px 38px;
+  overflow-x: hidden;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1768px;
+  }
+}
