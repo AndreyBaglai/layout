@@ -1,5 +1,11 @@
+@import 'sources/styles/media-mixin.scss';
+
 .link {
   padding: 0 16px;
+
+  @include _1000 {
+    padding: 0 10px;
+  }
 
   a {
     text-decoration: none;
@@ -7,6 +13,10 @@
     font-size: 18px;
     font-weight: normal;
     transition: all 0.5s ease;
+
+    @include _820 {
+      font-size: 15px;
+    }
 
     &:hover {
       opacity: 0.6;

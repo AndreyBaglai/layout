@@ -1,3 +1,5 @@
+@import 'sources/styles/media-mixin.scss';
+
 .divider {
   text-align: center;
   background-color: var(--secondary-color-page-background);
@@ -5,4 +7,9 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 24px;
+
+  @include _600 {
+   font-size: 10px;
+   line-height: 18px;
+  }
 }

@@ -1,8 +1,14 @@
 @import 'sources/styles/variables.scss';
+@import 'sources/styles/media-mixin.scss';
 
 .range {
   width: 100%;
   margin-top: 24px;
+
+  @include _600 {
+    margin: 16px;
+    width: 91%
+  }
 }
 
 .range[type='range'] {

@@ -14,6 +14,7 @@ const Trending: React.FC = () => {
   return (
     <section className={styles.trending}>
       <SectionHeader title="Trending Now" controls={true} />
+
       <div className={styles.content}>
         <TrendingCard
           imageSrc={trendingSrc1}
@@ -64,6 +65,7 @@ const Trending: React.FC = () => {
           isNew={true}
         />
       </div>
+      
       <InputRange />
     </section>
   );

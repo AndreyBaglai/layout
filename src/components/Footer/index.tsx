@@ -17,12 +17,14 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.logoWrapper}>
-          <Logo />
+          <Logo className={styles.logo} />
           <ToggleTheme />
         </div>
 
-        <FooterNav title="Categories" links={['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']} columns={3} />
-        <FooterNav title="About Us" links={['Contacts', 'Support']} columns={1} />
+        <div className={styles.navWrapper}>
+          <FooterNav title="Categories" links={['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']} columns={3} />
+          <FooterNav title="About Us" links={['Contacts', 'Support']} columns={1} />
+        </div>
 
         <div className={styles.socialLinksWrapper}>
           <ul>
@@ -36,7 +38,9 @@ const Footer: React.FC = () => {
               <InstagramIcon />
             </li>
           </ul>
-          <Button>Shop</Button>
+          <div className={styles.footerBtn}> 
+            <Button >Shop</Button>
+          </div>   
         </div>
       </div>
 

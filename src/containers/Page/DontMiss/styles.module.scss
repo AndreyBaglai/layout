@@ -1,3 +1,5 @@
+@import 'sources/styles/media-mixin.scss';
+
 .dontMiss {
   margin: 0 auto;
   padding: 0 70px 38px;
@@ -5,10 +7,33 @@
   overflow-x: hidden;
   max-width: 1440px;
 
+  @include _1920 {
+    padding: 0;
+  }
+
+  @include _1440 {
+    padding: 0 70px 38px;
+  }
+
+  @include _960 {
+    padding: 31px 20px 24px;
+  }
+
+  @include _600 {
+    margin: 16px auto 30px;
+    padding: 15px 0 12px;
+  }
+
   .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 1992px;
+
+    @include _768 {
+      width: 100%;
+      flex-direction: column;
+      margin: 0 auto;
+    }
   }
 }

@@ -14,18 +14,21 @@ const Categories: React.FC = () => {
   return (
     <section className={styles.categories}>
       <SectionHeader title="Categories" controls={true} />
+
       <div className={styles.content}>
-        {' '}
         <div className={styles.mainImg}>
           <Card size="big" imageSrc={categoriesSrc1} text="Women" />
         </div>
-        <div className={styles.items}>
-          <Card size="small" imageSrc={categoriesSrc2} text="Kids" />
-          <Card size="small" imageSrc={categoriesSrc3} text="Men" />
-        </div>
-        <div className={styles.items}>
-          <Card size="small" imageSrc={categoriesSrc2} text="Kids" />
-          <Card size="small" imageSrc={categoriesSrc3} text="Men" />
+
+        <div className={styles.itemsWrapper}>
+          <div className={styles.items}>
+            <Card size="small" imageSrc={categoriesSrc2} text="Kids" />
+            <Card size="small" imageSrc={categoriesSrc3} text="Men" />
+          </div>
+          <div className={styles.items}>
+            <Card size="small" imageSrc={categoriesSrc2} text="Kids" />
+            <Card size="small" imageSrc={categoriesSrc3} text="Men" />
+          </div>
         </div>
       </div>
 

@@ -1,4 +1,11 @@
+@import 'sources/styles/media-mixin.scss';
+
 .navigation {
   display: flex;
   list-style: none;
+  padding-left: 0;
+
+  @include _768 {
+    display: none;
+  }
 }

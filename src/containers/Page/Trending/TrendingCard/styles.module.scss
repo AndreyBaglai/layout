@@ -1,9 +1,15 @@
 @import 'sources/styles/variables.scss';
+@import 'sources/styles/media-mixin.scss';
 
 .card {
   width:  427px;
   height: 551px;
   margin-right: 20px;
+
+  @include _600 {
+    width: 300px;
+    height: 333px;
+  }
 
   .img {
     width: 427px;
@@ -12,6 +18,11 @@
     background-position: center center;
     background-size: cover;
     position: relative;
+
+    @include _600 {
+      width: 300px;
+      height: 333px;
+    }
 
     .favorite {
       position: absolute;

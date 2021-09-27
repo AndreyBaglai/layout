@@ -1,3 +1,5 @@
+@import 'sources/styles/media-mixin.scss';
+
 .icons {
   display: flex;
   align-items: baseline;
@@ -5,4 +7,27 @@
   list-style: none;
   width: 220px;
   padding-left: 0;
+
+  @include _768 {
+    justify-content: flex-end;
+  }
+
+  .favoriteIcon, .basketIcon, .userIcon, .infoIcon {
+    @include _768 {
+      display: none;
+    }
+  }
+
+  .burgerIcon {
+    display: none;
+
+    path {
+      fill: #000000;
+    }
+    
+    @include _768 {
+      display: block;
+      margin-left: 24px;
+    }
+  }
 }

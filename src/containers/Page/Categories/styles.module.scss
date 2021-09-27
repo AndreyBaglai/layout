@@ -1,3 +1,5 @@
+@import 'sources/styles/media-mixin.scss';
+
 .categories {
   margin: 0 auto;
   padding: 0 70px 38px;
@@ -5,13 +7,42 @@
   overflow-x: hidden;
   max-width: 1440px;
 
+  @include _1920 {
+    padding: 0;
+  }
+
+  @include _1440 {
+    padding: 0 70px 38px;
+  }
+
+  @include _960 {
+    padding: 31px 20px 24px;
+  }
+
+  @include _600 {
+    margin: 16px auto 30px;
+    padding: 15px 0 12px;
+  }
+
   .content {
     display: flex;
     justify-content: flex-start;
     max-height: 970px;
 
+    @include _768 {
+      flex-direction: column;
+    }
+
     .mainImg {
       margin-right: 20px;
+
+      @include _768 {
+        margin-right: 0;
+      }
+    }
+  
+    .itemsWrapper {
+      display: flex;
     }
 
     .items {
@@ -20,6 +51,16 @@
       justify-content: space-between;
       align-items: center;
       margin-right: 20px;
+
+      &:last-child {
+        @include _768 {
+          display: none;
+        }
+      }
+
+      @include _768 {
+        flex-direction: row;
+      }
     }
   }
 }

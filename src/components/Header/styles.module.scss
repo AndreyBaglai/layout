@@ -1,3 +1,5 @@
+@import 'sources/styles/media-mixin.scss';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -8,4 +10,16 @@
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @include _960 {
+    padding: 31px 20px 24px;
+  }
+
+  @include _768 {
+    padding: 12px 20px;
+  }
+
+  @include _600 {
+    padding: 12px 16px;
+  }
 }
