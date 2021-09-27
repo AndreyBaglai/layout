@@ -10,16 +10,40 @@
 
   @include _768 {
     justify-content: flex-end;
+    align-items: center;
   }
 
   .favoriteIcon, .basketIcon, .userIcon, .infoIcon {
+    cursor: pointer;
+
+    path {
+      fill: var(--color-toggle-icon);
+    }
+
     @include _768 {
       display: none;
     }
   }
 
+  .searchIcon {
+    cursor: pointer;
+
+    path {
+      fill: var(--color-toggle-icon);
+    }
+  }
+
+  .infoIcon {
+    cursor: pointer;
+
+    path {
+      stroke: var(--color-toggle-icon);
+    }
+  }
+
   .burgerIcon {
     display: none;
+    cursor: pointer;
 
     path {
       fill: var(--color-toggle-icon);

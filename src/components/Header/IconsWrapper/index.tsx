@@ -11,7 +11,7 @@ import styles from './styles.module.scss';
 
 const IconsWrapper: React.FC = () => {
   return <ul className={styles.icons}>
-    <li><SearchIcon /></li>
+    <li><SearchIcon className={styles.searchIcon} /></li>
     <li className={styles.favoriteIcon}><FavoriteIcon /></li>
     <li className={styles.basketIcon}><BasketIcon /></li>
     <li className={styles.userIcon}><UserIcon /></li>

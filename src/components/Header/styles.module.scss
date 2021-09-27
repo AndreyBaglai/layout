@@ -4,11 +4,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--secondary-color-page-background);
+  background-color: var(--header-color-bg);
   margin: 0 auto;
-  padding: 31px 70px 24px;
-  position: sticky;
+  padding: 28px 70px 24px;
+  position: fixed;
   top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
   z-index: 10;
 
   @include _960 {

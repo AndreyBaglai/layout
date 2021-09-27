@@ -16,13 +16,12 @@ const Page: React.FC = () => {
   return (
     <>
       <InputSearch />
-      <Header />
       <Sample
         title="New Collection"
         text="Inspired by city explorers. Made to move. Built for tomorrow"
         controls={true}
         imageBg={imageSrc1}
-      />
+      ><Header /></Sample>
       <Divider text="We’ve extended our returns period to 60 days" />
       <Trending />
       <Categories />

@@ -8,12 +8,34 @@
   width: 82px;
   height: 40px;
   background-color: var(--color-toggle-background);
+  position: relative;
+
+  .circle {
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 1s ease;
+    left: 49px;
+  }
+
+  .moon {
+    path {
+      fill: var(--moon-color);
+    }
+  }
+
+  .sun {
+    path {
+      fill: var(--sun-color);
+    }
+  }
 
   svg {
     cursor: pointer;
-
-    path {
-      fill: var(--color-toggle-icon);
-    }
+    z-index: 2;
   }
 }

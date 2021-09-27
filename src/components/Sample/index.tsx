@@ -13,7 +13,7 @@ interface IProps {
   imageBg: any;
 }
 
-const Sample: React.FC<IProps> = ({ title, text, controls, imageBg }) => {
+const Sample: React.FC<IProps> = ({ title, text, controls, imageBg, children }) => {
   return (
     <section className={styles.sample} style={{backgroundImage: `url(${imageBg}`}}>
       <div className={styles.content}>
@@ -27,6 +27,7 @@ const Sample: React.FC<IProps> = ({ title, text, controls, imageBg }) => {
           <MuteIcon />
         </div>
       )}
+      {children}
     </section>
   );
 };

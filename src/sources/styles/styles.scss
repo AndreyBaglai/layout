@@ -1,37 +1,54 @@
 @import './light-theme-variables.scss';
 @import './dark-theme-variables.scss';
+@import './variables.scss';
 
 :root {
   --primary-color-page-background: #{$light-primary-bg-color};
   --secondary-color-page-background: #{$light-secondary-bg-color};
 
+  --header-color-bg: #{$light-secondary-bg-color};
+
   --color-toggle-background: #{$light-toggle-bg-color};
   --color-toggle-icon: #{$dark-toggle-icon-color};
 
-  --color-nav-link: #{$dark-secondary-bg-color};
+  --moon-color: #{$dark-secondary-bg-color};
+  --sun-color: #{$dark-secondary-bg-color};
+
+  --color-nav-link: #{$light-secondary-text-color-opacity};
 
   --color-text: #{$light-primary-text-color};
   --subcolor-text: #{$light-secondary-text-color-opacity};
+
+  --input-thumb-color: #{$blue};
+  --input-track-color: #{$dark-opacity};
 }
 
 .dark {
   --primary-color-page-background: #{$dark-primary-bg-color};
   --secondary-color-page-background: #{$dark-secondary-bg-color};
 
+  --moon-color: #{$dark-secondary-bg-color};
+  --sun-color: #{$dark-secondary-text-color-opacity};
+
+  --header-color-bg: 'transparent';
+
   --color-toggle-background: #{$dark-toggle-bg-color};
   --color-toggle-icon: #{$light-toggle-icon-color};
 
-  --color-nav-link: #{$light-secondary-text-color-opacity};
+  --color-nav-link: #{$dark-secondary-text-color-opacity};
 
   --color-text: #{$dark-primary-text-color};
   --subcolor-text: #{$dark-secondary-text-color-opacity};
 
   --marker-color: #{$dark-secondary-text-color-opacity};
+
+  --input-range-color: #{$light-secondary-bg-color};
+  --input-track-color: #{$light-opacity};
 }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  transition: all .15s ease;
+  transition: all .5s ease;
   background-color:  var(--primary-color-page-background);
   color: var(--color-text);
   overflow-x: hidden;

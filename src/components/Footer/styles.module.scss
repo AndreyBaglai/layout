@@ -36,6 +36,10 @@
 
       .logo {
         margin-right: 12px;
+
+        path:nth-child(1) {
+          fill: var(--color-toggle-icon);
+        }
         
         @include _1440 {
           margin-bottom: 22px;

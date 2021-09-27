@@ -16,9 +16,24 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 40px;
+    position: relative;
 
     @include _600 {
       margin-left: 16px;
+    }
+  }
+
+  .mobileArrow {
+    position: relative;
+    top: 8px;
+    display: none;
+
+    @include _600 {
+      display: inline;
+    }
+
+    path {
+      fill: var(--color-toggle-icon);
     }
   }
 
@@ -35,6 +50,10 @@
 
     svg {
       cursor: pointer;
+
+      path + path {
+        fill: var(--color-toggle-icon);
+      }
     }
   }
 }
