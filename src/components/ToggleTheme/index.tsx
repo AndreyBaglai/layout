@@ -6,8 +6,12 @@ import { ReactComponent as SunIcon } from 'sources/icons/sun-icon.svg';
 import styles from './styles.module.scss';
 
 const ToggleTheme: React.FC = () => {
+    const onClick = () => {
+    document.body.classList.toggle('dark');
+  };
+
   return (
-    <div className={styles.toggle}>
+    <div onClick={onClick} className={styles.toggle}>
       <MoonIcon />
       <SunIcon />
     </div>

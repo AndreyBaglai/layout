@@ -13,10 +13,6 @@ import imageSrc2 from 'sources/images/bottom-bg.png';
 import InputSearch from 'components/InputSearch';
 
 const Page: React.FC = () => {
-  // const onClick = () => {
-  //   document.body.classList.toggle('dark');
-  // };
-
   return (
     <>
       <InputSearch />

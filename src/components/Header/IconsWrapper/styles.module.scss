@@ -22,7 +22,7 @@
     display: none;
 
     path {
-      fill: #000000;
+      fill: var(--color-toggle-icon);
     }
     
     @include _768 {

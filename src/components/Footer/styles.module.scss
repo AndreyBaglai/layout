@@ -15,12 +15,9 @@
       padding: 31px 20px 24px;
     }
 
-    @include _820 {
-      flex-direction: column;
-    }
-
     @include _600 {
       padding: 51px 16px 12px;
+      flex-direction: column;
     }
 
     .logoWrapper {
@@ -52,8 +49,8 @@
       justify-content: flex-start;
       align-items: flex-end;
 
-      @include _820 {
-        align-items: flex-start;
+      @include _768 {
+        max-width: 100px;
       }
 
       ul {
@@ -88,7 +85,7 @@
     padding: 16px 70px;
     margin: 0 auto;
     display: flex;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--subcolor-text);
     font-size: 12px;
     line-height: 24px;
 
@@ -107,6 +104,10 @@
 
       svg {
         margin-right: 10px;
+
+        path {
+          fill: var(--marker-color);
+        }
       }
     }
 

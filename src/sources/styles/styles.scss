@@ -11,6 +11,7 @@
   --color-nav-link: #{$dark-secondary-bg-color};
 
   --color-text: #{$light-primary-text-color};
+  --subcolor-text: #{$light-secondary-text-color-opacity};
 }
 
 .dark {
@@ -20,9 +21,12 @@
   --color-toggle-background: #{$dark-toggle-bg-color};
   --color-toggle-icon: #{$light-toggle-icon-color};
 
-  --color-nav-link: #{$light-primary-bg-color};
+  --color-nav-link: #{$light-secondary-text-color-opacity};
 
   --color-text: #{$dark-primary-text-color};
+  --subcolor-text: #{$dark-secondary-text-color-opacity};
+
+  --marker-color: #{$dark-secondary-text-color-opacity};
 }
 
 body {
