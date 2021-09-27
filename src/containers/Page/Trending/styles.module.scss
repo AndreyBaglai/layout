@@ -21,6 +21,16 @@
   @include _600 {
     margin: 16px auto 30px;
     padding: 15px 16px 12px;
+    max-height: none;
+
+    input {
+      margin: 22px 0 0;
+      width: 100%;
+    }
+
+    h3 {
+      margin-left: 0 !important;
+    }
   }
 
   .content {
@@ -28,6 +38,10 @@
     justify-content: space-between;
     align-items: center;
     width: 1768px;
+    
+    @include _600 {
+      height: 408px;
+    }
   }
 }
 

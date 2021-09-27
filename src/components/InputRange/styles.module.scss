@@ -1,6 +1,10 @@
 @import 'sources/styles/variables.scss';
 @import 'sources/styles/media-mixin.scss';
 
+.inputWrapper {
+  display:  flex;
+}
+
 .range {
   width: 100%;
   margin-top: 24px;
