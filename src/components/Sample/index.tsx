@@ -1,6 +1,8 @@
 import Button from 'components/Button';
 import React from 'react';
 
+import classNames from 'classnames';
+
 import { ReactComponent as FullScreenIcon } from 'sources/icons/fullscreen-icon.svg';
 import { ReactComponent as MuteIcon } from 'sources/icons/mute-icon.svg';
 
@@ -11,11 +13,13 @@ interface IProps {
   text: string;
   controls: boolean;
   imageBg: any;
+  isRotateGradient: boolean;
 }
 
-const Sample: React.FC<IProps> = ({ title, text, controls, imageBg, children }) => {
+const Sample: React.FC<IProps> = ({ title, text, controls, imageBg, children, isRotateGradient }) => {
   return (
     <section className={styles.sample} style={{backgroundImage: `url(${imageBg}`}}>
+      <div className={classNames(styles.gradient, { [styles.rotate]: isRotateGradient })}></div>
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.text}>{text}</p>

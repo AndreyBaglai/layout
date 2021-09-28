@@ -61,7 +61,7 @@ const DontMiss: React.FC = () => {
         <Card size="middle" imageSrc={dontMissSrc2} text="Unisex" />
         <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
       </div>
-      <InputRange max={3} onChange={onChangeSlider} sizeThumb="middle" />
+      <InputRange max={3} onChange={onChangeSlider} sizeThumb="middle" value={currIdx} />
     </section>
   );
 };

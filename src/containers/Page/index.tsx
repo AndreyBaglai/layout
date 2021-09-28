@@ -21,6 +21,7 @@ const Page: React.FC = () => {
         text="Inspired by city explorers. Made to move. Built for tomorrow"
         controls={true}
         imageBg={imageSrc1}
+        isRotateGradient={false}
       ><Header /></Sample>
       <Divider text="We’ve extended our returns period to 60 days" />
       <Trending />
@@ -31,6 +32,7 @@ const Page: React.FC = () => {
         text="Made to move. Built for tomorrow"
         controls={false}
         imageBg={imageSrc2}
+        isRotateGradient={true}
       />
       <Footer />
     </>
