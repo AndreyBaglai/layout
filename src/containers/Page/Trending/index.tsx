@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import SectionHeader from 'components/SectionHeader';
 import InputRange from 'components/InputRange';
@@ -11,6 +11,12 @@ import trendingSrc3 from 'sources/images/trending-3.png';
 import styles from './styles.module.scss';
 
 const Trending: React.FC = () => {
+  const [currIdx, setCurrIdx] = useState(1);
+
+  const onChangeImage = () => {
+  
+  }
+
   return (
     <section className={styles.trending}>
       <SectionHeader title="Trending Now" controls={true} />
@@ -66,7 +72,7 @@ const Trending: React.FC = () => {
         />
       </div>
       
-      <InputRange />
+      <InputRange max={6} onChange={onChangeImage} />
     </section>
   );
 };

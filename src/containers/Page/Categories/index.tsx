@@ -32,7 +32,7 @@ const Categories: React.FC = () => {
         </div>
       </div>
 
-      <InputRange />
+      <InputRange max={2} onChange={() => {}} />
     </section>
   );
 };
