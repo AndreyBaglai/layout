@@ -28,17 +28,23 @@
     display: flex;
     justify-content: flex-start;
     max-height: 970px;
+    position: relative;
+    left: 0;
+    transition: all 0.5s ease;
 
     @include _768 {
       flex-direction: column;
       max-height: none;
     }
 
-    .mainImg {
+    .bigImg {
       margin-right: 20px;
+      position: relative;
+      left: 0;
 
       @include _768 {
         margin-right: 0;
+        width: 100%;
       }
     }
   
@@ -53,14 +59,9 @@
       align-items: center;
       margin-right: 20px;
 
-      &:last-child {
-        @include _768 {
-          display: none;
-        }
-      }
-
       @include _768 {
         flex-direction: row;
+        margin-right: 0;
       }
     }
   }
