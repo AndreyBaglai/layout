@@ -2,6 +2,7 @@ import React from 'react';
 
 import MobileMenu from 'components/MobileMenu';
 import Navigation from 'components/Navigation';
+import InputSearch from 'components/InputSearch';
 
 import ToggleTheme from 'components/ToggleTheme';
 import IconsWrapper from './IconsWrapper';
@@ -21,10 +22,23 @@ const Header: React.FC = () => {
     if (menu) menu.style.left = '-1000px';
   }  
 
+  const onOpenInputSearch = () => {
+    const input = document.getElementById('inputSearch') as HTMLElement;
+    
+    if (input) input.style.top = '0';
+  }
+
+  const onCloseInputSearch = () => {
+     const input = document.getElementById('inputSearch') as HTMLElement;
+    
+    if (input) input.style.top = '-1000px';
+  }  
+
   return <header className={styles.header}>
+    <InputSearch onCloseInputSearch={onCloseInputSearch} />
     <ToggleTheme />
     <Navigation />
-    <IconsWrapper onOpenMobileMenu={onOpenMobileMenu} />
+    <IconsWrapper onOpenMobileMenu={onOpenMobileMenu} onOpenInputSearch={onOpenInputSearch} />
     <MobileMenu onCloseMobileMenu={onCloseMobileMenu} />
   </header>;
 };

@@ -11,11 +11,12 @@ import styles from './styles.module.scss';
 
 interface IProps {
   onOpenMobileMenu: () => void;
+  onOpenInputSearch: () => void;
 }
 
-const IconsWrapper: React.FC<IProps> = ({ onOpenMobileMenu }) => {
+const IconsWrapper: React.FC<IProps> = ({ onOpenMobileMenu, onOpenInputSearch }) => {
   return <ul className={styles.icons}>
-    <li><SearchIcon className={styles.searchIcon} /></li>
+    <li><SearchIcon onClick={onOpenInputSearch} className={styles.searchIcon} /></li>
     <li className={styles.favoriteIcon}><FavoriteIcon /></li>
     <li className={styles.basketIcon}><BasketIcon /></li>
     <li className={styles.userIcon}><UserIcon /></li>

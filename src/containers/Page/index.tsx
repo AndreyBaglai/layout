@@ -10,12 +10,10 @@ import Footer from 'components/Footer';
 
 import imageSrc1 from 'sources/images/top-bg.png';
 import imageSrc2 from 'sources/images/bottom-bg.png';
-import InputSearch from 'components/InputSearch';
 
 const Page: React.FC = () => {
   return (
     <>
-      <InputSearch />
       <Sample
         title="New Collection"
         text="Inspired by city explorers. Made to move. Built for tomorrow"

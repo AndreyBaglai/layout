@@ -1,7 +1,7 @@
 @import 'sources/styles/media-mixin.scss';
 
 .wrapper {
-  background-color: var(--secondary-color-page-background);
+  background-color: var(--primary-color-page-background);
   position: absolute;
   width: 100%;
   padding: 32px 0;
@@ -12,9 +12,29 @@
   transition: all 0.5s ease;
   top: -1000px;
   z-index: 20;
+  left: 0;
+
+  @include _960 {
+    padding-top: 100px;
+    max-width: 100%;
+  }
+
+  @include _768 {
+    box-sizing: border-box;
+    padding: 100px 50px 40px;
+    max-width: 100%;
+  }
+
+  @include _768 {
+    padding: 100px 20px 30px;
+  }
 
   .inputWrapper {
     position: relative;
+
+    @include _600 {
+      display: flex;
+    }
 
     .search {
       width: 620px;
@@ -22,13 +42,20 @@
       border-radius: 8px;
       border: none;
       margin: 0 auto;
-      padding: 8px 8px 8px 54px;
+      padding: 8px 12px 8px 54px;
+      color: var(--color-text);
+      position: relative;
+      border: 1px solid var(--subcolor-text);
+
+      @include _768 {
+        width: 100%;
+      }
 
       &::placeholder {
         font-weight: normal;
         font-size: 18px;
         line-height: 24px;
-        color: rgba(15, 15, 15, 0.4);
+        color: var(--subcolor-text);
       }
     }
 
@@ -36,6 +63,10 @@
       position: absolute;
       top: 6px;
       left: 16px;
+
+      path {
+        fill: var(--color-toggle-icon);
+      }
     }
   }
 
@@ -46,7 +77,11 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
-    color: #1e1e22;
+    color: var(--color-text);
+
+    @include _768 {
+      width: 100%;
+    }
   }
 
   .option {
@@ -57,7 +92,12 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--color-text);
+
+    @include _768 {
+      max-width: 100%;
+      text-align: left;
+    }
 
     svg {
       position: absolute;
@@ -65,6 +105,10 @@
       right: 0;
       color: rgba(0, 0, 0, 0.6);
       cursor: pointer;
+
+      path {
+        fill: var(--color-toggle-icon);
+      }
     }
   }
 
@@ -73,5 +117,9 @@
     right: 37px;
     top: 42px;
     cursor: pointer;
+
+    path {
+      fill: var(--color-toggle-icon)
+    }
   }
 }
