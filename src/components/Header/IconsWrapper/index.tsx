@@ -9,14 +9,18 @@ import { ReactComponent as BurgerIcon } from 'sources/icons/burger-icon.svg';
 
 import styles from './styles.module.scss';
 
-const IconsWrapper: React.FC = () => {
+interface IProps {
+  onOpenMobileMenu: () => void;
+}
+
+const IconsWrapper: React.FC<IProps> = ({ onOpenMobileMenu }) => {
   return <ul className={styles.icons}>
     <li><SearchIcon className={styles.searchIcon} /></li>
     <li className={styles.favoriteIcon}><FavoriteIcon /></li>
     <li className={styles.basketIcon}><BasketIcon /></li>
     <li className={styles.userIcon}><UserIcon /></li>
     <li className={styles.infoIcon}><InfoIcon /></li>
-    <li><BurgerIcon className={styles.burgerIcon} /></li>
+    <li><BurgerIcon className={styles.burgerIcon} onClick={onOpenMobileMenu} /></li>
   </ul>;
 };
 

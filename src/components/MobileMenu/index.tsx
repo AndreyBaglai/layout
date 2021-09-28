@@ -1,14 +1,17 @@
 import React from 'react';
 
-import { ReactComponent as MoreIcon } from 'sources/icons/nav-more-icon.svg';
 import { ReactComponent as CloseIcon } from 'sources/icons/close-icon.svg';
 
 import styles from './styles.module.scss';
 
-const MobileMenu = () => {
+interface IProps {
+  onCloseMobileMenu: () => void;
+}
+
+const MobileMenu: React.FC<IProps> = ({ onCloseMobileMenu }) => {
   return (
-    <div className={styles.wrapper}>
-      <CloseIcon className={styles.closeIcon} />
+    <div id="mobileMenu" className={styles.wrapper}>
+      <CloseIcon className={styles.closeIcon} onClick={onCloseMobileMenu} />
       <ul className={styles.menu}>
         <li>
           <a href="#">Home</a>
@@ -29,7 +32,7 @@ const MobileMenu = () => {
           <a href="#">Sale</a>
         </li>
         <li>
-          <a href="#">More <MoreIcon /></a>
+          <a href="#">More</a>
         </li>
       </ul>
     </div>
