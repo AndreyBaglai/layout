@@ -15,7 +15,7 @@ const moveSlider = (n: number) => {
   const bigImg = document.getElementById('bigImg');
 
   const isTablet = document.documentElement.clientWidth < 1000;
-  const isMobile = document.documentElement.clientWidth < 768;
+  const isMobile = document.documentElement.clientWidth < 769;
 
   if (slider && bigImg) {
     switch (n) {

@@ -11,7 +11,7 @@ import styles from './styles.module.scss';
 
 const moveSlider = (n: number) => {
   const slider = document.getElementById('dontMissSlider');
-  const isMobile = document.documentElement.clientWidth < 768;
+  const isMobile = document.documentElement.clientWidth < 769;
 
   if (slider) {
     switch (n) {
@@ -48,7 +48,7 @@ const DontMiss: React.FC = () => {
   const [widthThumb, setWidthThumb] = useState<'middle' | 'big'>('middle');
 
   useEffect(() => {
-    if (document.documentElement.clientWidth < 768) {
+    if (document.documentElement.clientWidth < 769) {
       setMaxColumns(2);
       setWidthThumb('big');
     }
