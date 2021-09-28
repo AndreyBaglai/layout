@@ -15,6 +15,7 @@
   --sun-color: #{$dark-secondary-bg-color};
 
   --color-nav-link: #{$light-secondary-text-color-opacity};
+  --hover-nav-link: #{$dark-secondary-bg-color};
 
   --color-text: #{$light-primary-text-color};
   --subcolor-text: #{$light-secondary-text-color-opacity};
@@ -36,6 +37,7 @@
   --color-toggle-icon: #{$light-toggle-icon-color};
 
   --color-nav-link: #{$dark-secondary-text-color-opacity};
+  --hover-nav-link: #{$light-secondary-bg-color};
 
   --color-text: #{$dark-primary-text-color};
   --subcolor-text: #{$dark-secondary-text-color-opacity};

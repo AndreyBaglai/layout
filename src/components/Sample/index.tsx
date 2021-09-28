@@ -20,6 +20,7 @@ const Sample: React.FC<IProps> = ({ title, text, controls, imageBg, children, is
   return (
     <section className={styles.sample} style={{backgroundImage: `url(${imageBg}`}}>
       <div className={classNames(styles.gradient, { [styles.rotate]: isRotateGradient })}></div>
+      
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.text}>{text}</p>

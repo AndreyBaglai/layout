@@ -32,8 +32,18 @@
       display: inline;
     }
 
-    path {
+    path:nth-child(1) {
+      fill: var(--color-toggle-background) !important;
+    }
+
+    path:last-child {
       fill: var(--color-toggle-icon);
+    }
+
+    &:hover {
+      path {
+        fill-opacity: 0.6;
+      }
     }
   }
 

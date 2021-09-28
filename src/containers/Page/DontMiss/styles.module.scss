@@ -33,9 +33,23 @@
     left: 0;
     transition: all 0.5s ease;
 
+    .column {
+      display: flex;
+      justify-content: space-between;
+
+      @include _768 {
+        flex-direction: column;
+        min-width: 100%;
+        margin-right: 40px;
+      }
+
+      @include _600 {
+        margin-right: 0;
+      }
+    }
+
     @include _768 {
       width: 100%;
-      flex-direction: column;
       margin: 0 auto;
     }
   }

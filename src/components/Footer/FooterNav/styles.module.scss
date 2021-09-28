@@ -29,6 +29,12 @@
       color: var(--subcolor-text);
       padding-bottom: 16px;
       padding-right: 105px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: var(--hover-nav-link);
+      }
 
       @include _1440 {
         padding-right: 40px;

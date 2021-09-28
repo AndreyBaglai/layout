@@ -19,13 +19,21 @@
     }
 
     &:hover {
-      opacity: 0.6;
+      color: var(--hover-nav-link);
+    }
+
+    &:hover svg {
+      path {
+        fill: var(--hover-nav-link);
+      }
     }
   }
 
   svg {
+    transition: all 0.5s ease;
+    
     path {
-      fill: var(--color-nav-link)
+      fill: var(--color-nav-link);
     }
   }
 }

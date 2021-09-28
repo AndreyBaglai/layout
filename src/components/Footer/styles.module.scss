@@ -66,6 +66,10 @@
         margin-top: 6px;
         padding-left: 0;
 
+        li {
+          cursor: pointer;
+        }
+
         @include _600 {
           position: absolute;
           right: 32px;
