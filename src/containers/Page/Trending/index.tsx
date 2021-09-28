@@ -46,19 +46,19 @@ const moveSlider = (n: number) => {
 const Trending: React.FC = () => {
   const [currIdx, setCurrIdx] = useState(1);
 
-  const onChangeImage = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
+  const onChangeSlider = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
     moveSlider(Number(currentTarget.value));
     setCurrIdx(Number(currentTarget.value));
   };
 
-  const handleSliderRightArrow = () => {
+  const handlerSliderRightArrow = () => {
     if (currIdx === 1) return;
 
     setCurrIdx(currIdx - 1);
     moveSlider(currIdx - 1);
   }
 
-  const handleSliderLeftArrow = () => {
+  const handlerSliderLeftArrow = () => {
     if (currIdx === 6) return;
 
     setCurrIdx(currIdx + 1);
@@ -67,7 +67,7 @@ const Trending: React.FC = () => {
 
   return (
     <section className={styles.trending}>
-      <SectionHeader title="Trending Now" controls={true} handlerLeftArrow={handleSliderLeftArrow} handlerRightArrow={handleSliderRightArrow} />
+      <SectionHeader title="Trending Now" controls={true} handlerLeftArrow={handlerSliderLeftArrow} handlerRightArrow={handlerSliderRightArrow} />
 
       <div id="trendingSlider" className={styles.content}>
         <TrendingCard
@@ -120,7 +120,7 @@ const Trending: React.FC = () => {
         />
       </div>
 
-      <InputRange max={6} onChange={onChangeImage} sizeThumb="small" value={currIdx} />
+      <InputRange max={6} onChange={onChangeSlider} sizeThumb="small" value={currIdx} />
     </section>
   );
 };
