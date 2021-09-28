@@ -9,16 +9,18 @@ import styles from './styles.module.scss';
 interface IProps {
   title: string;
   controls: boolean;
+  handlerRightArrow?: () => void;
+  handlerLeftArrow?: () => void;
 }
 
-const SectionHeader: React.FC<IProps> = ({ title, controls }) => {
+const SectionHeader: React.FC<IProps> = ({ title, controls, handlerLeftArrow, handlerRightArrow }) => {
   return (
     <div className={styles.sectionHeader}>
       <h3 className={styles.title}>{title}<MobileRightArrowIcon className={styles.mobileArrow} /></h3>
       {controls && (
         <div className={styles.arrowsWrapper}>
-          <LeftArrowIcon />
-          <RightArrowIcon />
+          <LeftArrowIcon onClick={handlerLeftArrow} />
+          <RightArrowIcon onClick={handlerRightArrow} />
         </div>
       )}
     </div>

@@ -18,7 +18,7 @@ const DontMiss: React.FC = () => {
         <Card size="middle" imageSrc={dontMissSrc2} text="Unisex" />
         <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
       </div>
-      <InputRange max={2} onChange={() => {}} />
+      <InputRange max={2} onChange={() => {}} sizeThumb="middle" />
     </section>
   );
 };

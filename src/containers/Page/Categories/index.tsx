@@ -32,7 +32,7 @@ const Categories: React.FC = () => {
         </div>
       </div>
 
-      <InputRange max={2} onChange={() => {}} />
+      <InputRange max={2} onChange={() => {}} sizeThumb="big" />
     </section>
   );
 };
