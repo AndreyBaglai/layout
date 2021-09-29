@@ -22,7 +22,11 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.navWrapper}>
-          <FooterNav title="Categories" links={['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']} columns={3} />
+          <FooterNav
+            title="Categories"
+            links={['Popular', 'Kids', 'Sale', 'New', 'Men', 'Women']}
+            columns={3}
+          />
           <FooterNav title="About Us" links={['Contacts', 'Support']} columns={1} />
         </div>
 
@@ -38,9 +42,9 @@ const Footer: React.FC = () => {
               <InstagramIcon />
             </li>
           </ul>
-          <div className={styles.footerBtn}> 
-            <Button >Shop</Button>
-          </div>   
+          <div className={styles.footerBtn}>
+            <Button>Shop</Button>
+          </div>
         </div>
       </div>
 

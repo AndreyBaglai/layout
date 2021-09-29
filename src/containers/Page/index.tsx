@@ -15,18 +15,19 @@ const Page: React.FC = () => {
   return (
     <>
       <Sample
-        title="New Collection"
+        title="New <br /> Collection"
         text="Inspired by city explorers. Made to move. Built for tomorrow"
         controls={true}
         imageBg={imageSrc1}
-        isRotateGradient={false}
-      ><Header /></Sample>
+        isRotateGradient={false}>
+        <Header />
+      </Sample>
       <Divider text="We’ve extended our returns period to 60 days" />
       <Trending />
       <Categories />
       <DontMiss />
       <Sample
-        title="New in Town"
+        title="New <br /> in Town"
         text="Made to move. Built for tomorrow"
         controls={false}
         imageBg={imageSrc2}

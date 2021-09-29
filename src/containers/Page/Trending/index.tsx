@@ -20,24 +20,19 @@ const moveSlider = (n: number) => {
         slider.style.left = '0';
         break;
       case 2:
-        isMobile ? slider.style.left = '-320px' :
-        slider.style.left = '-447px';
+        isMobile ? (slider.style.left = '-320px') : (slider.style.left = '-447px');
         break;
       case 3:
-      isMobile ? slider.style.left = '-640px' :
-        slider.style.left = '-894px';
+        isMobile ? (slider.style.left = '-640px') : (slider.style.left = '-894px');
         break;
       case 4:
-      isMobile ? slider.style.left = '-960px' :
-        slider.style.left = '-1341px';
+        isMobile ? (slider.style.left = '-960px') : (slider.style.left = '-1341px');
         break;
       case 5:
-      isMobile ? slider.style.left = '-1280px' :
-        slider.style.left = '-1788px';
+        isMobile ? (slider.style.left = '-1280px') : (slider.style.left = '-1788px');
         break;
       case 6:
-      isMobile ? slider.style.left = '-1600px' :
-        slider.style.left = '-2235px';
+        isMobile ? (slider.style.left = '-1600px') : (slider.style.left = '-2235px');
         break;
     }
   }
@@ -56,18 +51,23 @@ const Trending: React.FC = () => {
 
     setCurrIdx(currIdx - 1);
     moveSlider(currIdx - 1);
-  }
+  };
 
   const handlerSliderLeftArrow = () => {
     if (currIdx === 6) return;
 
     setCurrIdx(currIdx + 1);
     moveSlider(currIdx + 1);
-  }
+  };
 
   return (
     <section className={styles.trending}>
-      <SectionHeader title="Trending Now" controls={true} handlerLeftArrow={handlerSliderLeftArrow} handlerRightArrow={handlerSliderRightArrow} />
+      <SectionHeader
+        title="Trending Now"
+        controls={true}
+        handlerLeftArrow={handlerSliderLeftArrow}
+        handlerRightArrow={handlerSliderRightArrow}
+      />
 
       <div id="trendingSlider" className={styles.content}>
         <TrendingCard

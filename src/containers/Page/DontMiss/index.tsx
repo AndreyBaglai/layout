@@ -19,24 +19,21 @@ const moveSlider = (n: number) => {
         slider.style.left = '0';
         break;
       case 2:
-        isMobile ? slider.style.left = `-${document.documentElement.clientWidth}px` :
-        slider.style.left = '-670px';
+        isMobile
+          ? (slider.style.left = `-${document.documentElement.clientWidth}px`)
+          : (slider.style.left = '-670px');
         break;
       case 3:
-      isMobile ? slider.style.left = '-640px' :
-        slider.style.left = '-1340px';
+        isMobile ? (slider.style.left = '-640px') : (slider.style.left = '-1340px');
         break;
       case 4:
-      isMobile ? slider.style.left = '-640px' :
-        slider.style.left = '-2010px';
+        isMobile ? (slider.style.left = '-640px') : (slider.style.left = '-2010px');
         break;
       case 5:
-      isMobile ? slider.style.left = '-640px' :
-        slider.style.left = '-2680px';
+        isMobile ? (slider.style.left = '-640px') : (slider.style.left = '-2680px');
         break;
       case 6:
-      isMobile ? slider.style.left = '-640px' :
-        slider.style.left = '-3350px';
+        isMobile ? (slider.style.left = '-640px') : (slider.style.left = '-3350px');
         break;
     }
   }
@@ -52,7 +49,7 @@ const DontMiss: React.FC = () => {
       setMaxColumns(2);
       setWidthThumb('big');
     }
-  }, [])
+  }, []);
 
   const onChangeSlider = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
     moveSlider(Number(currentTarget.value));
@@ -64,30 +61,45 @@ const DontMiss: React.FC = () => {
 
     setCurrIdx(currIdx - 1);
     moveSlider(currIdx - 1);
-  }
+  };
 
   const handlerSliderLeftArrow = () => {
     if (currIdx === 6) return;
 
     setCurrIdx(currIdx + 1);
     moveSlider(currIdx + 1);
-  }
+  };
 
   return (
     <section className={styles.dontMiss}>
-      <SectionHeader title="Don't Miss" controls={true} handlerLeftArrow={handlerSliderLeftArrow} handlerRightArrow={handlerSliderRightArrow} />
+      <SectionHeader
+        title="Don't Miss"
+        controls={true}
+        handlerLeftArrow={handlerSliderLeftArrow}
+        handlerRightArrow={handlerSliderRightArrow}
+      />
 
       <div id="dontMissSlider" className={styles.content}>
-        <div className={styles.column}>   <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
-        <Card size="middle" imageSrc={dontMissSrc2} text="Unisex" />
-        <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" /></div>
-     
-        <div className={styles.column}><Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
-        <Card size="middle" imageSrc={dontMissSrc2} text="Unisex" />
-        <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" /></div>
+        <div className={styles.column}>
+          {' '}
+          <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
+          <Card size="middle" imageSrc={dontMissSrc2} text="Unisex" />
+          <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
+        </div>
+
+        <div className={styles.column}>
+          <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
+          <Card size="middle" imageSrc={dontMissSrc2} text="Unisex" />
+          <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
+        </div>
       </div>
 
-      <InputRange max={maxColumns} onChange={onChangeSlider} sizeThumb={widthThumb} value={currIdx} />
+      <InputRange
+        max={maxColumns}
+        onChange={onChangeSlider}
+        sizeThumb={widthThumb}
+        value={currIdx}
+      />
     </section>
   );
 };

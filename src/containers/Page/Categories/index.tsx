@@ -52,18 +52,23 @@ const Categories: React.FC = () => {
 
     setCurrIdx(currIdx - 1);
     moveSlider(currIdx - 1);
-  }
+  };
 
   const handlerSliderLeftArrow = () => {
     if (currIdx === 6) return;
 
     setCurrIdx(currIdx + 1);
     moveSlider(currIdx + 1);
-  }
+  };
 
   return (
     <section className={styles.categories}>
-      <SectionHeader title="Categories" controls={true} handlerLeftArrow={handlerSliderLeftArrow} handlerRightArrow={handlerSliderRightArrow} />
+      <SectionHeader
+        title="Categories"
+        controls={true}
+        handlerLeftArrow={handlerSliderLeftArrow}
+        handlerRightArrow={handlerSliderRightArrow}
+      />
 
       <div id="categoriesSlider" className={styles.content}>
         <div id="bigImg" className={styles.bigImg}>
@@ -76,7 +81,7 @@ const Categories: React.FC = () => {
             <Card size="small" imageSrc={categoriesSrc3} text="Men" />
           </div>
           <div className={styles.items}>
-              <Card size="small" imageSrc={categoriesSrc3} text="Men" />
+            <Card size="small" imageSrc={categoriesSrc3} text="Men" />
             <Card size="small" imageSrc={categoriesSrc2} text="Kids" />
           </div>
         </div>

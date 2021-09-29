@@ -20,10 +20,14 @@ const InputSearch: React.FC<IProps> = ({ onCloseInputSearch }) => {
           placeholder="Search among millions of products"
         />
       </div>
-      
+
       <h4 className={styles.reset}>Reset Search</h4>
-      <p className={styles.option}>White Thirt <CloseIcon /></p>
-      <p className={styles.option}>Overhit with belt <CloseIcon /></p>
+      <p className={styles.option}>
+        White Thirt <CloseIcon />
+      </p>
+      <p className={styles.option}>
+        Overhit with belt <CloseIcon />
+      </p>
 
       <CloseIcon onClick={onCloseInputSearch} className={styles.closeField} />
     </div>

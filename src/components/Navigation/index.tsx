@@ -9,13 +9,15 @@ const Navigation: React.FC = () => {
   return (
     <nav>
       <ul className={styles.navigation}>
-        <Link>Home</Link>
+        <Link isActive={true}>Home</Link>
         <Link>New</Link>
         <Link>Men</Link>
         <Link>Women</Link>
         <Link>Kids</Link>
         <Link>Sale</Link>
-        <Link>More <MoreIcon /></Link>
+        <Link>
+          More <MoreIcon />
+        </Link>
       </ul>
     </nav>
   );

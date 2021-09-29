@@ -15,20 +15,20 @@ const ToggleTheme: React.FC = observer(() => {
   useEffect(() => {
     const themeFromLS = localStorage.getItem('theme');
     themeFromLS && themeStore.changeTheme(themeFromLS);
-    
+
     if (themeFromLS === 'dark') {
       document.body.classList.add('dark');
 
-      const circles: HTMLElement[] = Array.from(
-        document.querySelectorAll('span[data-circle="circle"]')
+      const toggleIcons: HTMLElement[] = Array.from(
+        document.querySelectorAll('span[data-circle="circle"]'),
       );
-      circles.forEach((circle: HTMLElement) => (circle.style.left = '8px'));
+      toggleIcons.forEach((circle: HTMLElement) => (circle.style.left = '8px'));
     }
   }, [theme]);
 
   const onToggleTheme = () => {
-    const circles: HTMLElement[] = Array.from(
-      document.querySelectorAll('span[data-circle="circle"]')
+    const toggleIcons: HTMLElement[] = Array.from(
+      document.querySelectorAll('span[data-circle="circle"]'),
     );
 
     if (theme === 'light') {
@@ -36,13 +36,13 @@ const ToggleTheme: React.FC = observer(() => {
       themeStore.changeTheme('dark');
 
       localStorage.setItem('theme', 'dark');
-      circles.forEach((circle: HTMLElement) => (circle.style.left = '8px'));
+      toggleIcons.forEach((circle: HTMLElement) => (circle.style.left = '8px'));
     } else {
       document.body.classList.toggle('dark');
       themeStore.changeTheme('light');
 
       localStorage.setItem('theme', 'light');
-      circles.forEach((circle: HTMLElement) => (circle.style.left = '49px'));
+      toggleIcons.forEach((circle: HTMLElement) => (circle.style.left = '49px'));
     }
   };
 
