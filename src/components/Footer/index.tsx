@@ -33,13 +33,19 @@ const Footer: React.FC = () => {
         <div className={styles.socialLinksWrapper}>
           <ul>
             <li>
-              <LinkedInIcon />
+              <a href="#">
+                <LinkedInIcon />
+              </a>
             </li>
             <li>
-              <FacebookIcon />
+              <a href="#">
+                <FacebookIcon />
+              </a>
             </li>
             <li>
-              <InstagramIcon />
+              <a href="#">
+                <InstagramIcon />
+              </a>
             </li>
           </ul>
           <div className={styles.footerBtn}>

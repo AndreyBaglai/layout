@@ -14,7 +14,7 @@ const FooterNav: React.FC<IProps> = ({ title, links, columns }) => {
       <h4 className={styles.title}>{title}</h4>
       <ul className={styles.nav} style={{ columnCount: columns }}>
         {links.map((link: string, idx: number) => (
-          <li key={idx}>{link}</li>
+          <li key={idx}><a href="#">{link}</a></li>
         ))}
       </ul>
     </div>

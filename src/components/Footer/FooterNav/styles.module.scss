@@ -25,14 +25,19 @@
     li {
       font-weight: normal;
       font-size: 18px;
-      line-height: 24px;
-      color: var(--subcolor-text);
+      line-height: 24px;     
       padding-bottom: 16px;
       padding-right: 105px;
-      cursor: pointer;
       transition: all 0.5s ease;
 
-      &:hover {
+      a {
+        text-decoration: none;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        color: var(--subcolor-text);
+      }
+
+      &:hover a {
         color: var(--hover-nav-link);
       }
 
