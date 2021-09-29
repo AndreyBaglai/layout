@@ -2,15 +2,21 @@ import React, { useState } from 'react';
 
 import SectionHeader from 'components/SectionHeader';
 import InputRange from 'components/InputRange';
+import Card from 'components/Card';
+
+import {
+  MAX_INDEX_ON_SLIDER,
+  MAX_SLIDE_ON_CATEGORIES_SLIDER,
+  MIN_INDEX_ON_SLIDER,
+} from 'utils/const';
 
 import categoriesSrc1 from 'sources/images/categories-1.png';
 import categoriesSrc2 from 'sources/images/categories-2.png';
 import categoriesSrc3 from 'sources/images/categories-3.png';
 
 import styles from './styles.module.scss';
-import Card from 'components/Card';
 
-const moveSlider = (n: number) => {
+const moveSlider = (index: number) => {
   const slider = document.getElementById('categoriesSlider');
   const bigImg = document.getElementById('bigImg');
 
@@ -18,7 +24,7 @@ const moveSlider = (n: number) => {
   const isMobile = document.documentElement.clientWidth < 769;
 
   if (slider && bigImg) {
-    switch (n) {
+    switch (index) {
       case 1:
         slider.style.left = '0';
         bigImg.style.left = '0';
@@ -40,7 +46,7 @@ const moveSlider = (n: number) => {
 };
 
 const Categories: React.FC = () => {
-  const [currIdx, setCurrIdx] = useState(1);
+  const [currIdx, setCurrIdx] = useState(MIN_INDEX_ON_SLIDER);
 
   const onChangeSlider = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
     moveSlider(Number(currentTarget.value));
@@ -48,14 +54,14 @@ const Categories: React.FC = () => {
   };
 
   const handlerSliderRightArrow = () => {
-    if (currIdx === 1) return;
+    if (currIdx === MIN_INDEX_ON_SLIDER) return;
 
     setCurrIdx(currIdx - 1);
     moveSlider(currIdx - 1);
   };
 
   const handlerSliderLeftArrow = () => {
-    if (currIdx === 6) return;
+    if (currIdx === MAX_SLIDE_ON_CATEGORIES_SLIDER) return;
 
     setCurrIdx(currIdx + 1);
     moveSlider(currIdx + 1);
@@ -87,7 +93,12 @@ const Categories: React.FC = () => {
         </div>
       </div>
 
-      <InputRange max={2} onChange={onChangeSlider} sizeThumb="big" value={currIdx} />
+      <InputRange
+        max={MAX_SLIDE_ON_CATEGORIES_SLIDER}
+        onChange={onChangeSlider}
+        sizeThumb="big"
+        value={currIdx}
+      />
     </section>
   );
 };

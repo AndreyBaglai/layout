@@ -4,6 +4,8 @@ import SectionHeader from 'components/SectionHeader';
 import InputRange from 'components/InputRange';
 import TrendingCard from './TrendingCard';
 
+import { MAX_INDEX_ON_SLIDER, MIN_INDEX_ON_SLIDER } from 'utils/const';
+
 import trendingSrc1 from 'sources/images/trending-1.png';
 import trendingSrc2 from 'sources/images/trending-2.png';
 import trendingSrc3 from 'sources/images/trending-3.png';
@@ -39,7 +41,7 @@ const moveSlider = (n: number) => {
 };
 
 const Trending: React.FC = () => {
-  const [currIdx, setCurrIdx] = useState(1);
+  const [currIdx, setCurrIdx] = useState(MIN_INDEX_ON_SLIDER);
 
   const onChangeSlider = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
     moveSlider(Number(currentTarget.value));
@@ -47,14 +49,14 @@ const Trending: React.FC = () => {
   };
 
   const handlerSliderRightArrow = () => {
-    if (currIdx === 1) return;
+    if (currIdx === MIN_INDEX_ON_SLIDER) return;
 
     setCurrIdx(currIdx - 1);
     moveSlider(currIdx - 1);
   };
 
   const handlerSliderLeftArrow = () => {
-    if (currIdx === 6) return;
+    if (currIdx === MAX_INDEX_ON_SLIDER) return;
 
     setCurrIdx(currIdx + 1);
     moveSlider(currIdx + 1);

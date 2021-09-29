@@ -13,7 +13,7 @@ const MobileMenu: React.FC<IProps> = ({ onCloseMobileMenu }) => {
     <div id="mobileMenu" className={styles.wrapper}>
       <CloseIcon className={styles.closeIcon} onClick={onCloseMobileMenu} />
       <ul className={styles.menu}>
-        <li>
+        <li className={styles.active}>
           <a href="#">Home</a>
         </li>
         <li>

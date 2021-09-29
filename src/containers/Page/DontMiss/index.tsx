@@ -4,17 +4,23 @@ import SectionHeader from 'components/SectionHeader';
 import InputRange from 'components/InputRange';
 import Card from 'components/Card';
 
+import {
+  MAX_COLUMNS_ON_DONTMISS_SLIDER,
+  MAX_INDEX_ON_SLIDER,
+  MIN_INDEX_ON_SLIDER,
+} from 'utils/const';
+
 import dontMissSrc1 from 'sources/images/dont-miss-1.png';
 import dontMissSrc2 from 'sources/images/dont-miss-2.png';
 
 import styles from './styles.module.scss';
 
-const moveSlider = (n: number) => {
+const moveSlider = (index: number) => {
   const slider = document.getElementById('dontMissSlider');
   const isMobile = document.documentElement.clientWidth < 769;
 
   if (slider) {
-    switch (n) {
+    switch (index) {
       case 1:
         slider.style.left = '0';
         break;
@@ -40,8 +46,8 @@ const moveSlider = (n: number) => {
 };
 
 const DontMiss: React.FC = () => {
-  const [currIdx, setCurrIdx] = useState(1);
-  const [maxColumns, setMaxColumns] = useState(6);
+  const [currIdx, setCurrIdx] = useState(MIN_INDEX_ON_SLIDER);
+  const [maxColumns, setMaxColumns] = useState(MAX_COLUMNS_ON_DONTMISS_SLIDER);
   const [widthThumb, setWidthThumb] = useState<'middle' | 'big'>('middle');
 
   useEffect(() => {
@@ -57,14 +63,14 @@ const DontMiss: React.FC = () => {
   };
 
   const handlerSliderRightArrow = () => {
-    if (currIdx === 1) return;
+    if (currIdx === MIN_INDEX_ON_SLIDER) return;
 
     setCurrIdx(currIdx - 1);
     moveSlider(currIdx - 1);
   };
 
   const handlerSliderLeftArrow = () => {
-    if (currIdx === 6) return;
+    if (currIdx === MAX_INDEX_ON_SLIDER) return;
 
     setCurrIdx(currIdx + 1);
     moveSlider(currIdx + 1);
@@ -81,7 +87,6 @@ const DontMiss: React.FC = () => {
 
       <div id="dontMissSlider" className={styles.content}>
         <div className={styles.column}>
-          {' '}
           <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />
           <Card size="middle" imageSrc={dontMissSrc2} text="Unisex" />
           <Card size="middle" imageSrc={dontMissSrc1} text="Special Offer" />

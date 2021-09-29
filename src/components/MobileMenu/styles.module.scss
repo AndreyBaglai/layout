@@ -45,6 +45,13 @@
         color: var(--hover-nav-link);
       }
     }
+
+    .active { 
+      a {
+        font-weight: bold;
+        color: var(--hover-nav-link);
+      }
+    }
   }
 }
 

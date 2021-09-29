@@ -8,6 +8,9 @@ import { ReactComponent as SunIcon } from 'sources/icons/sun-icon.svg';
 
 import styles from './styles.module.scss';
 
+const getToggleIcons = (): HTMLElement[] =>
+  Array.from(document.querySelectorAll('span[data-icon="icon"]'));
+
 const ToggleTheme: React.FC = observer(() => {
   const { themeStore } = useStore();
   const { theme } = themeStore;
@@ -19,36 +22,30 @@ const ToggleTheme: React.FC = observer(() => {
     if (themeFromLS === 'dark') {
       document.body.classList.add('dark');
 
-      const toggleIcons: HTMLElement[] = Array.from(
-        document.querySelectorAll('span[data-circle="circle"]'),
-      );
-      toggleIcons.forEach((circle: HTMLElement) => (circle.style.left = '8px'));
+      const toggleIcons: HTMLElement[] = getToggleIcons();
+      toggleIcons.forEach((icon: HTMLElement) => (icon.style.left = '8px'));
     }
   }, [theme]);
 
   const onToggleTheme = () => {
-    const toggleIcons: HTMLElement[] = Array.from(
-      document.querySelectorAll('span[data-circle="circle"]'),
-    );
+    const toggleIcons: HTMLElement[] = getToggleIcons();
+    document.body.classList.toggle('dark');
+    console.log(toggleIcons);
 
     if (theme === 'light') {
-      document.body.classList.toggle('dark');
       themeStore.changeTheme('dark');
-
       localStorage.setItem('theme', 'dark');
-      toggleIcons.forEach((circle: HTMLElement) => (circle.style.left = '8px'));
+      toggleIcons.forEach((icon: HTMLElement) => (icon.style.left = '8px'));
     } else {
-      document.body.classList.toggle('dark');
       themeStore.changeTheme('light');
-
       localStorage.setItem('theme', 'light');
-      toggleIcons.forEach((circle: HTMLElement) => (circle.style.left = '49px'));
+      toggleIcons.forEach((icon: HTMLElement) => (icon.style.left = '49px'));
     }
   };
 
   return (
     <div onClick={onToggleTheme} className={styles.toggle}>
-      <span data-circle="circle" className={styles.circle}></span>
+      <span data-icon="icon" className={styles.icon}></span>
       <MoonIcon className={styles.moon} />
       <SunIcon className={styles.sun} />
     </div>
