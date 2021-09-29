@@ -12,12 +12,12 @@ import trendingSrc3 from 'sources/images/trending-3.png';
 
 import styles from './styles.module.scss';
 
-const moveSlider = (n: number) => {
+const moveSlider = (index: number) => {
   const slider = document.getElementById('trendingSlider');
   const isMobile = document.documentElement.clientWidth < 600;
 
   if (slider) {
-    switch (n) {
+    switch (index) {
       case 1:
         slider.style.left = '0';
         break;
