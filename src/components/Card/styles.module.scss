@@ -21,6 +21,10 @@
     line-height: 64px;
     color: #ffffff;
     margin-bottom: 12px;
+
+    @include _600 {
+      font-size: 44px;
+    }
   }
 }
 

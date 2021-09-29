@@ -8,4 +8,9 @@
   @include _768 {
     display: none;
   }
+
+  .moreIcon {
+    position: relative;
+    bottom: 1px;
+  }
 }

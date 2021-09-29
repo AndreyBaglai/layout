@@ -16,7 +16,7 @@ const Navigation: React.FC = () => {
         <Link>Kids</Link>
         <Link>Sale</Link>
         <Link>
-          More <MoreIcon />
+          More <MoreIcon className={styles.moreIcon} />
         </Link>
       </ul>
     </nav>

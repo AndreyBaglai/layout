@@ -49,6 +49,7 @@
 
       @include _768 {
         width: 100%;
+        padding-left: 40px;
       }
 
       &::placeholder {
@@ -63,6 +64,10 @@
       position: absolute;
       top: 6px;
       left: 16px;
+
+      @include _768 {
+        left: 8px;
+      }
 
       path {
         fill: var(--color-toggle-icon);
@@ -105,6 +110,11 @@
       right: 0;
       color: rgba(0, 0, 0, 0.6);
       cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover path {
+        opacity: 0.6;
+      }
 
       path {
         fill: var(--color-toggle-icon);
@@ -117,6 +127,11 @@
     right: 37px;
     top: 42px;
     cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover path {
+      opacity: 0.6;
+    }
 
     path {
       fill: var(--color-toggle-icon)
