@@ -31,7 +31,7 @@
   --moon-color: #{$dark-secondary-bg-color};
   --sun-color: #{$dark-secondary-text-color-opacity};
 
-  --header-color-bg: 'transparent';
+  --header-color-bg: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 
   --color-toggle-background: #{$dark-toggle-bg-color};
   --color-toggle-icon: #{$light-toggle-icon-color};
