@@ -5,10 +5,10 @@ import Button from 'components/Button';
 import FooterNav from './FooterNav';
 
 import { ReactComponent as MarkerIcon } from 'sources/icons/marker-icon.svg';
-import { ReactComponent as Logo } from 'sources/icons/logo-icon.svg';
 import { ReactComponent as LinkedInIcon } from 'sources/icons/linkedin-icon.svg';
 import { ReactComponent as FacebookIcon } from 'sources/icons/facebook-icon.svg';
 import { ReactComponent as InstagramIcon } from 'sources/icons/instagram-icon.svg';
+import { ReactComponent as Logo } from 'sources/icons/logo-icon.svg';
 
 import styles from './styles.module.scss';
 

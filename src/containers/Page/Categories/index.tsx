@@ -5,7 +5,6 @@ import InputRange from 'components/InputRange';
 import Card from 'components/Card';
 
 import {
-  MAX_INDEX_ON_SLIDER,
   MAX_SLIDE_ON_CATEGORIES_SLIDER,
   MIN_INDEX_ON_SLIDER,
 } from 'utils/const';
@@ -21,7 +20,7 @@ const moveSlider = (index: number) => {
   const bigImg = document.getElementById('bigImg');
 
   const isTablet = document.documentElement.clientWidth < 1000;
-  const isMobilegit = document.documentElement.clientWidth < 769;
+  const isMobile = document.documentElement.clientWidth < 769;
 
   if (slider && bigImg) {
     switch (index) {

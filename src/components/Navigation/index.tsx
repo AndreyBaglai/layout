@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Link from './Link';
+
 import { ReactComponent as MoreIcon } from 'sources/icons/nav-more-icon.svg';
 
 import styles from './styles.module.scss';
