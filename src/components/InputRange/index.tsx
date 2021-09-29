@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 interface IProps {
   max: number;
   sizeThumb: 'small' | 'middle' | 'big';
-  onChange: (event: any) => void;
+  onChange: (event: React.FormEvent<HTMLInputElement>) => void;
   value?: number;
 }
 

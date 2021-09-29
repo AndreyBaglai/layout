@@ -10,7 +10,7 @@ interface IProps {
   title: string;
   text: string;
   controls: boolean;
-  imageBg: any;
+  imageBg: string;
   isRotateGradient: boolean;
 }
 
