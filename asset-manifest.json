@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/layout/static/css/main.99dad5af.chunk.css",
+    "main.css": "/layout/static/css/main.6f8a3280.chunk.css",
     "main.js": "/layout/static/js/main.afb66e66.chunk.js",
     "main.js.map": "/layout/static/js/main.afb66e66.chunk.js.map",
     "runtime-main.js": "/layout/static/js/runtime-main.ee0ee199.js",
@@ -10,7 +10,7 @@
     "static/js/2.216f3d65.chunk.js.map": "/layout/static/js/2.216f3d65.chunk.js.map",
     "index.html": "/layout/index.html",
     "static/css/2.679831fc.chunk.css.map": "/layout/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.99dad5af.chunk.css.map": "/layout/static/css/main.99dad5af.chunk.css.map",
+    "static/css/main.6f8a3280.chunk.css.map": "/layout/static/css/main.6f8a3280.chunk.css.map",
     "static/js/2.216f3d65.chunk.js.LICENSE.txt": "/layout/static/js/2.216f3d65.chunk.js.LICENSE.txt",
     "static/media/basket-icon.adce366e.svg": "/layout/static/media/basket-icon.adce366e.svg",
     "static/media/bottom-bg.dec8f113.png": "/layout/static/media/bottom-bg.dec8f113.png",
@@ -47,7 +47,7 @@
     "static/js/runtime-main.ee0ee199.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.216f3d65.chunk.js",
-    "static/css/main.99dad5af.chunk.css",
+    "static/css/main.6f8a3280.chunk.css",
     "static/js/main.afb66e66.chunk.js"
   ]
 }
