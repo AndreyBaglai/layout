@@ -15,7 +15,7 @@ const InputRange: React.FC<IProps> = ({ max, onChange, sizeThumb, value }) => (
     <input
       className={classNames(styles.range, styles[sizeThumb])}
       type="range"
-      min="1"
+      min="0"
       max={max}
       onChange={onChange}
       value={value}

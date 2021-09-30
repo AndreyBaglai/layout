@@ -1,77 +1,83 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
 
-import SectionHeader from 'components/SectionHeader';
 import InputRange from 'components/InputRange';
 import TrendingCard from './TrendingCard';
+import SampleNextArrow from 'components/SliderArrows/Next';
+import SamplePrevArrow from 'components/SliderArrows/Prev';
 
-import { MAX_INDEX_ON_SLIDER, MIN_INDEX_ON_SLIDER } from 'utils/const';
-
+import { ReactComponent as MobileRightArrowIcon } from 'sources/icons/mobile-arrow-icon.svg';
 import trendingSrc1 from 'sources/images/trending-1.png';
 import trendingSrc2 from 'sources/images/trending-2.png';
 import trendingSrc3 from 'sources/images/trending-3.png';
 
 import styles from './styles.module.scss';
 
-const moveSlider = (index: number) => {
-  const slider = document.getElementById('trendingSlider');
-  const isMobile = document.documentElement.clientWidth < 600;
-
-  if (slider) {
-    switch (index) {
-      case 1:
-        slider.style.left = '0';
-        break;
-      case 2:
-        isMobile ? (slider.style.left = '-320px') : (slider.style.left = '-447px');
-        break;
-      case 3:
-        isMobile ? (slider.style.left = '-640px') : (slider.style.left = '-894px');
-        break;
-      case 4:
-        isMobile ? (slider.style.left = '-960px') : (slider.style.left = '-1341px');
-        break;
-      case 5:
-        isMobile ? (slider.style.left = '-1280px') : (slider.style.left = '-1788px');
-        break;
-      case 6:
-        isMobile ? (slider.style.left = '-1600px') : (slider.style.left = '-2235px');
-        break;
-    }
-  }
-};
-
 const Trending: React.FC = () => {
-  const [currIdx, setCurrIdx] = useState(MIN_INDEX_ON_SLIDER);
+  const [currIdx, setCurrIdx] = useState(0);
+  const [maxInput, setMaxInput] = useState(3);
+
+  useEffect(() => {
+    if (document.documentElement.clientWidth < 1200) {
+      setMaxInput(4);
+    }
+    if (document.documentElement.clientWidth < 620) {
+      setMaxInput(5);
+    }
+  }, []);
 
   const onChangeSlider = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
-    moveSlider(Number(currentTarget.value));
-    setCurrIdx(Number(currentTarget.value));
+    sliderTrending.slickGoTo(currentTarget.value);
   };
 
-  const handlerSliderRightArrow = () => {
-    if (currIdx === MAX_INDEX_ON_SLIDER) return;
-
-    setCurrIdx(currIdx + 1);
-    moveSlider(currIdx + 1);
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    accessibility: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    beforeChange: (_: any, next: any) => setCurrIdx(next),
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+      {
+        breakpoint: 620,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+    ],
   };
 
-  const handlerSliderLeftArrow = () => {
-    if (currIdx === MIN_INDEX_ON_SLIDER) return;
-
-    setCurrIdx(currIdx - 1);
-    moveSlider(currIdx - 1);
-  };
+  let sliderTrending: any;
 
   return (
     <section className={styles.trending}>
-      <SectionHeader
-        title="Trending Now"
-        controls={true}
-        handlerLeftArrow={handlerSliderLeftArrow}
-        handlerRightArrow={handlerSliderRightArrow}
-      />
+      <h2 className={styles.title}>
+        Trending Now <MobileRightArrowIcon className={styles.mobileArrow} />
+      </h2>
 
-      <div id="trendingSlider" className={styles.content}>
+      <Slider className={styles.slider} ref={(slider) => (sliderTrending = slider)} {...settings}>
         <TrendingCard
           imageSrc={trendingSrc1}
           title="Overhit with belt"
@@ -120,9 +126,9 @@ const Trending: React.FC = () => {
           controls={false}
           isNew={true}
         />
-      </div>
+      </Slider>
 
-      <InputRange max={6} onChange={onChangeSlider} sizeThumb="small" value={currIdx} />
+      <InputRange max={maxInput} onChange={onChangeSlider} sizeThumb="small" value={currIdx} />
     </section>
   );
 };

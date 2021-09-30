@@ -6,6 +6,49 @@
   overflow: hidden;
   max-width: 1440px;
 
+  // .slider {
+  //   min-width: 3000px !important;
+
+  //   @include _1000 {
+  //     min-width: 2000px !important;
+  //   }
+  // }
+
+  .title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    position: relative;
+
+    @include _600 {
+      margin-left: 16px;
+    }
+  }
+
+  .mobileArrow {
+    position: relative;
+    top: 8px;
+    display: none;
+
+    @include _600 {
+      display: inline;
+    }
+
+    path:nth-child(1) {
+      fill: var(--color-toggle-background) !important;
+    }
+
+    path:last-child {
+      fill: var(--color-toggle-icon);
+    }
+
+    &:hover {
+      path {
+        fill-opacity: 0.6;
+      }
+    }
+  }
+
   @include _1920 {
     padding: 0;
   }
