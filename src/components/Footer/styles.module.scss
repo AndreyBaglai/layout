@@ -1,4 +1,5 @@
 @import 'sources/styles/media-mixin.scss';
+@import 'sources/styles/variables.scss';
 
 .footer {
   background-color: var(--secondary-color-page-background);
@@ -20,7 +21,7 @@
       flex-direction: column;
     }
 
-    .logoWrapper {
+    .textWrapper {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
@@ -34,11 +35,14 @@
         margin-bottom: 20px;
       }
 
-      .logo {
-        margin-right: 12px;
+      .text {
+        margin: 0 12px 0 0;
+        font-size: 24px;
+        line-height: 24px;
+        color: $blue;
 
-        path:nth-child(1) {
-          fill: var(--color-toggle-icon);
+        .changeText {
+          color: var(--color-toggle-icon);
         }
 
         @include _1440 {

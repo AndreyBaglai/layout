@@ -8,7 +8,6 @@ import { ReactComponent as MarkerIcon } from 'sources/icons/marker-icon.svg';
 import { ReactComponent as LinkedInIcon } from 'sources/icons/linkedin-icon.svg';
 import { ReactComponent as FacebookIcon } from 'sources/icons/facebook-icon.svg';
 import { ReactComponent as InstagramIcon } from 'sources/icons/instagram-icon.svg';
-import { ReactComponent as Logo } from 'sources/icons/logo-icon.svg';
 
 import styles from './styles.module.scss';
 
@@ -16,8 +15,8 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
-        <div className={styles.logoWrapper}>
-          <Logo className={styles.logo} />
+        <div className={styles.textWrapper}>
+          <p className={styles.text}><span className={styles.changeText}>Stone</span>Tile</p>
           <ToggleTheme />
         </div>
 
