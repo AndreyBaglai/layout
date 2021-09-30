@@ -30,8 +30,7 @@ const ToggleTheme: React.FC = observer(() => {
   const onToggleTheme = () => {
     const toggleIcons: HTMLElement[] = getToggleIcons();
     document.body.classList.toggle('dark');
-    console.log(toggleIcons);
-
+    
     if (theme === 'light') {
       themeStore.changeTheme('dark');
       localStorage.setItem('theme', 'dark');
