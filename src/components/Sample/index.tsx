@@ -19,7 +19,6 @@ const Sample: React.FC<IProps> = ({
   text,
   controls,
   imageBg,
-  children,
   isRotateGradient,
 }) => {
   return (
@@ -43,7 +42,6 @@ const Sample: React.FC<IProps> = ({
           <MuteIcon />
         </div>
       )}
-      {children}
     </section>
   );
 };

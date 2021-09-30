@@ -14,14 +14,14 @@ import imageSrc2 from 'sources/images/bottom-bg.png';
 const Page: React.FC = () => {
   return (
     <>
+      <Header />
       <Sample
         title="New <br /> Collection"
         text="Inspired by city explorers. Made to move. Built for tomorrow"
         controls={true}
         imageBg={imageSrc1}
-        isRotateGradient={false}>
-        <Header />
-      </Sample>
+        isRotateGradient={false} />
+     
       <Divider text="We’ve extended our returns period to 60 days" />
       <Trending />
       <Categories />
