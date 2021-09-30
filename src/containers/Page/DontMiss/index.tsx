@@ -63,17 +63,17 @@ const DontMiss: React.FC = () => {
   };
 
   const handlerSliderRightArrow = () => {
-    if (currIdx === MIN_INDEX_ON_SLIDER) return;
-
-    setCurrIdx(currIdx - 1);
-    moveSlider(currIdx - 1);
-  };
-
-  const handlerSliderLeftArrow = () => {
     if (currIdx === MAX_INDEX_ON_SLIDER) return;
 
     setCurrIdx(currIdx + 1);
     moveSlider(currIdx + 1);
+  };
+
+  const handlerSliderLeftArrow = () => {
+    if (currIdx === MIN_INDEX_ON_SLIDER) return;
+
+    setCurrIdx(currIdx - 1);
+    moveSlider(currIdx - 1);
   };
 
   return (
