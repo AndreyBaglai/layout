@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Slider from 'react-slick';
 
 import InputRange from 'components/InputRange';
@@ -12,7 +12,11 @@ import trendingSrc1 from 'sources/images/trending-1.png';
 import trendingSrc2 from 'sources/images/trending-2.png';
 import trendingSrc3 from 'sources/images/trending-3.png';
 
-import { CLIENT_WIDTH, TRENDING_SLIDER_MOBILE_WIDTH, TRENDING_SLIDER_TABLET_WIDTH } from 'utils/const';
+import {
+  CLIENT_WIDTH,
+  TRENDING_SLIDER_MOBILE_WIDTH,
+  TRENDING_SLIDER_TABLET_WIDTH,
+} from 'utils/const';
 
 import styles from './styles.module.scss';
 
@@ -73,9 +77,12 @@ const Trending: React.FC = () => {
     }
   }, []);
 
-  const onChangeSlider = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
-    sliderTrending?.slickGoTo(Number(currentTarget.value));
-  };
+  const onChangeSlider = useCallback(
+    ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
+      sliderTrending?.slickGoTo(Number(currentTarget.value));
+    },
+    [currIdx],
+  );
 
   return (
     <section className={styles.trending}>
@@ -134,7 +141,12 @@ const Trending: React.FC = () => {
         />
       </Slider>
 
-      <InputRange max={maxInputScroll} onChange={onChangeSlider} sizeThumb="small" value={currIdx} />
+      <InputRange
+        max={maxInputScroll}
+        onChange={onChangeSlider}
+        sizeThumb="small"
+        value={currIdx}
+      />
     </section>
   );
 };
