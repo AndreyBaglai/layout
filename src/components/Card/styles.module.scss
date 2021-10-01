@@ -40,6 +40,10 @@
     margin-left: 0;
     background-position-y: inherit;
   }
+
+  @include _600 {
+    height: 275px;
+  }
 }
 
 .middle {
@@ -69,5 +73,13 @@
   @include _1000 {
     width: 100%;
     background-position-y: inherit;
+  }
+
+  @include _768 {
+    background-position-x: right;
+  }
+
+  @include _600 {
+    height: 572px;
   }
 }
