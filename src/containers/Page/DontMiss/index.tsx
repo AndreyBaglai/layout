@@ -32,7 +32,7 @@ const DontMiss: React.FC = () => {
       setWidthThumb('big');
     }
     if (CLIENT_WIDTH < DONTMISS_SLIDER_MOBILE_WIDTH) {
-      setMaxInputScroll(5);
+      setMaxInputScroll(1);
       setWidthThumb('big');
     }
   }, []);
@@ -72,6 +72,7 @@ const DontMiss: React.FC = () => {
             slidesToScroll: 1,
             initialSlide: 0,
             slidesToShow: 1,
+            rows: 3,
           },
         },
       ],
