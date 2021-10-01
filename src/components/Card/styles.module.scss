@@ -29,18 +29,16 @@
 }
 
 .small {
-  width: 427px;
-  height: 475px;
+  height: 474px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-position-x: center;
+  background-position-y: bottom;
 
   @include _768 {
-    min-width: 0;
-    width: 350px;
-    height: 420px;
-  }
-
-  @include _600 {
-    width: 264px;
-    height: 375px;
+    width: 100%;
+    margin-left: 0;
+    background-position-y: inherit;
   }
 }
 
@@ -62,20 +60,10 @@
 }
 
 .big {
-  width: 873px;
   height: 970px;
 
   @include _1000 {
-    width: 673px;
-  }
-
-  @include _768 {
     width: 100%;
-    height: 760px;
-  }
-
-  @include _600 {
-    width: 100%;
-    height: 526px;
+    background-position-y: inherit;
   }
 }

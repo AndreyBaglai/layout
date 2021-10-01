@@ -14,9 +14,9 @@ import SampleNextArrow from 'components/SliderArrows/Next';
 
 const DontMiss: React.FC = () => {
   const [currIdx, setCurrIdx] = useState(0);
-  const [maxInput, setMaxInput] = useState(3);
+ 
   const [widthThumb, setWidthThumb] = useState<'middle' | 'big'>('middle');
-
+ const [maxInput, setMaxInput] = useState(3);
   useEffect(() => {
     if (document.documentElement.clientWidth < 1440) {
       setMaxInput(4);
