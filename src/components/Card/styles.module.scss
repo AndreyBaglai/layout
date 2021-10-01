@@ -23,7 +23,7 @@
     margin-bottom: 12px;
 
     @include _600 {
-      font-size: 44px;
+      font-size: 43px;
     }
   }
 }
@@ -33,7 +33,7 @@
   margin-left: 20px;
   margin-bottom: 20px;
   background-position-x: center;
-  background-position-y: bottom;
+  background-position-y: inherit;
 
   @include _768 {
     width: 100%;
@@ -43,12 +43,12 @@
 }
 
 .middle {
-  width: 400px;
   height: 515px;
-  margin-right: 20px;
+  margin-right: 10px;
 
   @include _960 {
     width: 100%;
+    background-position: inherit;
   }
 
   @include _768 {
@@ -56,6 +56,10 @@
     min-width: 0;
     height: 500px;
     margin-right: 0;
+  }
+
+  @include _600 {
+    background-position: center;
   }
 }
 
