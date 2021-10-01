@@ -1,0 +1,329 @@
+[33mcommit 4b7c96bb74a4ef911e3e8f6fd6330d777c42cfac[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 14:31:04 2021 +0300
+
+    fix: title margin
+
+[33mcommit 04499114d7b09f3c6f7932ae3a2513b350e663c1[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 14:26:19 2021 +0300
+
+    fix: picture size in categories slider
+
+[33mcommit 944722ac61f3507d399f6cf1b7f74577622d6b21[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 14:04:44 2021 +0300
+
+    fix: dont miss slider on mobile size
+
+[33mcommit 497888bd83e4565b4a51ca1f916aa1bb9aff23d5[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 13:47:44 2021 +0300
+
+    fix: card width on 320px
+
+[33mcommit 168928030d609b111287eecfb8bc7899a4669cf4[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 13:07:09 2021 +0300
+
+    fix: picture size in sliders
+
+[33mcommit a4a34b10449839a4708811db48fa0066a3df9052[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 12:46:09 2021 +0300
+
+    refactor: categories component
+
+[33mcommit c733ff9d72599c92c4fe8b9063192f7c301e89a9[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 12:32:11 2021 +0300
+
+    refactor: dontmiss component
+
+[33mcommit c94c8100696c1341f5f46971f3d0d4cc03469e7d[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 12:21:02 2021 +0300
+
+    refactor: rending component
+
+[33mcommit 643f3058a4938caf8b031fa5cb77163abc3cfa56[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 11:28:40 2021 +0300
+
+    refactor: categories slider with react-slick
+
+[33mcommit fc93555ed0eda15bdb3c51677007540a28f108e0[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Oct 1 10:17:47 2021 +0300
+
+    refactor: dont miss slider with react-slick
+
+[33mcommit 5c7f509b510fc1a26510395cfad267dc7a18e2c0[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 30 17:33:03 2021 +0300
+
+    refactor: add react-slick for trending slider
+
+[33mcommit 0ebda67dd8114a65669bef8e0e17f83cd84fd493[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 30 13:43:57 2021 +0300
+
+    fix: footer text
+
+[33mcommit 1b5bd708f6cb0c1de767468e21ca67303ad74460[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 30 13:35:57 2021 +0300
+
+    fix: slider arrows handler
+
+[33mcommit c904cfea999b9bf35ef64881f6525cb28708ad18[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 30 13:11:13 2021 +0300
+
+    fix: prepend header on top page
+
+[33mcommit 47f3c5777cce73a43712eb536e21bd74fa6eb9b9[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 30 09:48:52 2021 +0300
+
+    fix: remove console log
+
+[33mcommit c7aa1b10bfcdbd97b2382396b791f981e0e5f541[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 16:39:53 2021 +0300
+
+    fix: change type any
+
+[33mcommit c63f9cd173d190e1ee49d697bf6f3073a6ba604f[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 16:25:10 2021 +0300
+
+    fix: delete commits log file
+
+[33mcommit bc36e85b7832b66fef499c213c2578f30ef34543[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 14:32:49 2021 +0300
+
+    fix: footer nav links
+
+[33mcommit 3ff557b591d6e1348f4133867bacfa8ecdee86d0[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 13:45:05 2021 +0300
+
+    fix: change order import
+
+[33mcommit 59ad0c3bde11409394a90a58d17f5e9c69355d49[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 13:40:25 2021 +0300
+
+    fix: change name argument
+
+[33mcommit cfe4afd14ce22d6f8df9317fdd3cffda9c7860be[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 13:11:21 2021 +0300
+
+    fix: toggle bg color
+
+[33mcommit 31facfbe17b5c1a173f5892c2075ad3ac0b138fd[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 12:46:31 2021 +0300
+
+    fix: styles for mobile
+
+[33mcommit 806d6f064958c3078c804b42524090b603f32777[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 12:11:45 2021 +0300
+
+    fix: dark header background
+
+[33mcommit 5e4fd38b60b49cf6b4897ed2c4b44fedb1752a67[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 11:55:39 2021 +0300
+
+    refactor: add constants
+
+[33mcommit 5f6393348f992e1d0660057ced11e7923b7ebf5c[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Wed Sep 29 11:04:57 2021 +0300
+
+    fix: interactive styles
+
+[33mcommit dbfae6abc99459db68a78c5bc226fbada4b7d138[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 17:31:28 2021 +0300
+
+    feat: add handler open and close for input search
+
+[33mcommit 97e79c10f9a1d065f81fd7f3170488bd45566927[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 16:55:53 2021 +0300
+
+    feat: add handler for open and close mobile menu
+
+[33mcommit ce1d2ef4e6abab946646e4115c37a21af00444ce[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 16:14:44 2021 +0300
+
+    fix: tablet styles
+
+[33mcommit 8ede306f7fdf17b01617e54ef816bf5a933751d4[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 15:58:46 2021 +0300
+
+    feat: add categories slider
+
+[33mcommit 5570ea17b7ebe3eddb66dbc88bef3bfe4a40c39d[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 14:59:31 2021 +0300
+
+    refactor: dont miss slider
+
+[33mcommit 52eac2b8c333310f82384a244e09b8885b2fffb2[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 12:45:29 2021 +0300
+
+    fix: sample gradient
+
+[33mcommit 53008120760034cdbebff6f8b50abbfc44ea9cd7[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 12:09:31 2021 +0300
+
+    feat: add dont miss slider
+
+[33mcommit eceb5027314ebdcbfb6c0dcc677fc7ccf284cbc8[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 11:50:35 2021 +0300
+
+    add trending slider
+
+[33mcommit c7556def2840f5e2458c605907ac1956c67dd9a7[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Tue Sep 28 09:31:48 2021 +0300
+
+    feat: save theme color in localstorage
+
+[33mcommit 30756525989f66591d37c1033d4fe6297be08060[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Mon Sep 27 17:28:34 2021 +0300
+
+    refactor: change theme handler
+
+[33mcommit a5b558506d067f37bc69a82470bab1ea1c45d3a2[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Mon Sep 27 14:52:09 2021 +0300
+
+    fix: change color theme
+
+[33mcommit 40204dcccf4ab852664f42c1dec172c84c47eae2[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Mon Sep 27 14:00:26 2021 +0300
+
+    fix: input type range styles
+
+[33mcommit 32b67bce5a6079d5ac6101789f48d6a7283c59f1[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Mon Sep 27 12:52:27 2021 +0300
+
+    feat: add responsive styles
+
+[33mcommit 98f7f2c000416cad4d28fc43b9a1b0c93bb21ba7[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 16:23:52 2021 +0300
+
+    feat: add styles for 1920px
+
+[33mcommit 73443523785dfd8c11f7879db6e2f93deba577b9[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 15:48:08 2021 +0300
+
+    feat: add mobile menu
+
+[33mcommit 3e28f91e10e7f966e5c147553829da5b20f8a0d8[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 14:35:57 2021 +0300
+
+    feat: add input search component
+
+[33mcommit 0507064b970515333fd65116e2eee23c64b30979[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 13:52:04 2021 +0300
+
+    feat: add footer
+
+[33mcommit 277a8307d2cc02e6cb9a11469949e2476f37cb62[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 11:41:31 2021 +0300
+
+    feat: add trending component
+
+[33mcommit 21890c7533fa91075ea75f7c589ba484a64f5d4d[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 10:20:43 2021 +0300
+
+    feat: add dontmiss component
+
+[33mcommit a37a99ac3116da88c3c333d68e8277af78046bb4[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 10:07:26 2021 +0300
+
+    feat: add categories component
+
+[33mcommit 5996c63b5d321802a622c873769dd7ddd43a86c4[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Fri Sep 24 09:33:50 2021 +0300
+
+    fear: add Card component
+
+[33mcommit c92473dfdc06683a2c89105d22fe086f01d07c06[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 17:01:11 2021 +0300
+
+    feat: add section header component
+
+[33mcommit 122dfb983da113c7b77955a213de1eb98a5bd23a[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 16:39:41 2021 +0300
+
+    feat: add input range component
+
+[33mcommit e179f6f7c86037cc72fa8844cde4ee3977660fad[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 16:02:25 2021 +0300
+
+    feat: add divider component
+
+[33mcommit 71d7422b62712ffa561d8413173dfc9bf579c7f2[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 15:53:28 2021 +0300
+
+    feat: add header and sample components
+
+[33mcommit 5cb386fc05cb53bab1e31308df6349495ec6b227[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 12:42:22 2021 +0300
+
+    feat: add button component
+
+[33mcommit 499d1aec7e531d47cca684084e19f39293792f43[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 12:17:37 2021 +0300
+
+    feat: add images and icons
+
+[33mcommit 9226c4d56a9fd9b183c2bcc693cc71bda6818d6b[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 11:30:42 2021 +0300
+
+    feat: add basic logic for change theme
+
+[33mcommit 14a95a1e57fccba14308611b063cb83604037358[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 09:57:28 2021 +0300
+
+    init: add basic structure files
+
+[33mcommit 15c237735704f59da79ab09e8ef092575ee755be[m
+Author: AndreyBaglai <andreybaglai@gmail.com>
+Date:   Thu Sep 23 09:28:53 2021 +0300
+
+    Initialize project using Create React App

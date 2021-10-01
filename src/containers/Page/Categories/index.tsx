@@ -43,6 +43,7 @@ const Categories: React.FC = () => {
       infinite: false,
       speed: 500,
       slidesToShow: 2,
+      draggable: false,
       slidesToScroll: 1,
       initialSlide: 0,
       accessibility: true,

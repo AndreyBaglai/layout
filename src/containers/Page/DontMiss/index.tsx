@@ -52,6 +52,7 @@ const DontMiss: React.FC = () => {
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
+      draggable: false,
       initialSlide: 0,
       accessibility: true,
       nextArrow: <SampleNextArrow />,
