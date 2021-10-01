@@ -1,6 +1,4 @@
-export const MAX_SLIDE_ON_CATEGORIES_SLIDER = 2;
+export const CLIENT_WIDTH = document.documentElement.clientWidth;
 
-export const MAX_COLUMNS_ON_DONTMISS_SLIDER = 6;
-
-export const MAX_INDEX_ON_SLIDER = 6;
-export const MIN_INDEX_ON_SLIDER = 1;
+export const TRENDING_SLIDER_TABLET_WIDTH = 1200;
+export const TRENDING_SLIDER_MOBILE_WIDTH = 620;

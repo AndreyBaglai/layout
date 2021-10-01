@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Slider from 'react-slick';
 
 import InputRange from 'components/InputRange';
@@ -7,69 +7,75 @@ import SampleNextArrow from 'components/SliderArrows/Next';
 import SamplePrevArrow from 'components/SliderArrows/Prev';
 
 import { ReactComponent as MobileRightArrowIcon } from 'sources/icons/mobile-arrow-icon.svg';
+
 import trendingSrc1 from 'sources/images/trending-1.png';
 import trendingSrc2 from 'sources/images/trending-2.png';
 import trendingSrc3 from 'sources/images/trending-3.png';
 
+import { CLIENT_WIDTH, TRENDING_SLIDER_MOBILE_WIDTH, TRENDING_SLIDER_TABLET_WIDTH } from 'utils/const';
+
 import styles from './styles.module.scss';
 
+let sliderTrending: Slider | null;
+
 const Trending: React.FC = () => {
+  const [maxInputScroll, setMaxInputScroll] = useState(3);
   const [currIdx, setCurrIdx] = useState(0);
-  const [maxInput, setMaxInput] = useState(3);
+
+  const settingsTrendingSlider = useMemo(
+    () => ({
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      initialSlide: 0,
+      accessibility: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      beforeChange: (_: any, nextIdx: number) => setCurrIdx(nextIdx),
+      responsive: [
+        {
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: 0,
+          },
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 0,
+          },
+        },
+        {
+          breakpoint: 620,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0,
+          },
+        },
+      ],
+    }),
+    [currIdx],
+  );
 
   useEffect(() => {
-    if (document.documentElement.clientWidth < 1200) {
-      setMaxInput(4);
+    if (CLIENT_WIDTH < TRENDING_SLIDER_TABLET_WIDTH) {
+      setMaxInputScroll(4);
     }
-    if (document.documentElement.clientWidth < 620) {
-      setMaxInput(5);
+    if (CLIENT_WIDTH < TRENDING_SLIDER_MOBILE_WIDTH) {
+      setMaxInputScroll(5);
     }
   }, []);
 
   const onChangeSlider = ({ currentTarget }: React.FormEvent<HTMLInputElement>) => {
-    sliderTrending.slickGoTo(currentTarget.value);
+    sliderTrending?.slickGoTo(Number(currentTarget.value));
   };
-
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    accessibility: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    beforeChange: (_: any, next: any) => setCurrIdx(next),
-    responsive: [
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          initialSlide: 0,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 0,
-        },
-      },
-      {
-        breakpoint: 620,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 0,
-        },
-      },
-    ],
-  };
-
-  let sliderTrending: any;
 
   return (
     <section className={styles.trending}>
@@ -77,7 +83,7 @@ const Trending: React.FC = () => {
         Trending Now <MobileRightArrowIcon className={styles.mobileArrow} />
       </h2>
 
-      <Slider ref={(slider) => (sliderTrending = slider)} {...settings}>
+      <Slider ref={(slider: Slider) => (sliderTrending = slider)} {...settingsTrendingSlider}>
         <TrendingCard
           imageSrc={trendingSrc1}
           title="Overhit with belt"
@@ -128,7 +134,7 @@ const Trending: React.FC = () => {
         />
       </Slider>
 
-      <InputRange max={maxInput} onChange={onChangeSlider} sizeThumb="small" value={currIdx} />
+      <InputRange max={maxInputScroll} onChange={onChangeSlider} sizeThumb="small" value={currIdx} />
     </section>
   );
 };

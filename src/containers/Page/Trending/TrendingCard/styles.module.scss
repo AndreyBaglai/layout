@@ -2,16 +2,12 @@
 @import 'sources/styles/media-mixin.scss';
 
 .card {
-  width:  427px;
+  width: inherit;
   height: 551px;
-  margin-right: 20px;
+  margin-right: 10px;
 
   @include _1440 {
     width: inherit;
-  }
-
-  @include _768 {
-    margin-right: 0;
   }
 
   @include _600 {
@@ -21,7 +17,6 @@
   }
 
   .img {
-    width: 427px;
     height: 475px;
     background-repeat: no-repeat;
     background-position: center center;
