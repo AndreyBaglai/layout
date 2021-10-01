@@ -28,11 +28,11 @@
     }
 
     path:nth-child(1) {
-      fill: var(--color-toggle-background) !important;
+      fill: var(--color-text) !important;
     }
 
     path:last-child {
-      fill: var(--color-toggle-icon);
+      fill: var(--color-toggle-background);
     }
 
     &:hover {
@@ -57,35 +57,5 @@
   @include _600 {
     margin: 16px auto 30px;
     padding: 15px 0 12px;
-  }
-
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1992px;
-    position: relative;
-    left: 0;
-    transition: all 0.5s ease;
-
-    .column {
-      display: flex;
-      justify-content: space-between;
-
-      @include _768 {
-        flex-direction: column;
-        min-width: 100%;
-        margin-right: 40px;
-      }
-
-      @include _600 {
-        margin-right: 0;
-      }
-    }
-
-    @include _768 {
-      width: 100%;
-      margin: 0 auto;
-    }
   }
 }

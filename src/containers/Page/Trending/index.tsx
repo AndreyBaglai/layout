@@ -77,7 +77,7 @@ const Trending: React.FC = () => {
         Trending Now <MobileRightArrowIcon className={styles.mobileArrow} />
       </h2>
 
-      <Slider className={styles.slider} ref={(slider) => (sliderTrending = slider)} {...settings}>
+      <Slider ref={(slider) => (sliderTrending = slider)} {...settings}>
         <TrendingCard
           imageSrc={trendingSrc1}
           title="Overhit with belt"

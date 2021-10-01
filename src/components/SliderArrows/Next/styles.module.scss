@@ -1,9 +1,15 @@
+@import 'sources/styles/media-mixin.scss';
+
 .next {
   cursor: pointer;
   transition: all 0.5s ease;
   position: absolute;
   right: 0;
-  top: -54px;
+  top: -58px;
+
+  @include _600 {
+    visibility: hidden;
+  }
 
   path + path {
     fill: var(--color-toggle-icon);
